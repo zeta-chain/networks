@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Output directory
+dist/
+
+# Cache files for typescript
+*.tsbuildinfo
+
+# Environment variables
+.env
+
+# IDE - Visual Studio Code
+.vscode
+
+# Logs
+*.log
+
+# Ignore npm debug logs and .lock file
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore .next folder for Next.js projects
+.next/
+
+# TypeScript Auto-Generated File
+*.tg.ts
+
+# Mac OS
+.DS_Store

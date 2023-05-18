@@ -1,0 +1,126 @@
+{
+  "mumbai_testnet": {
+    "chain_id": "80001",
+    "chain_name": "Mumbai Testnet",
+    "fees": {
+      "assets": [
+        {
+          "denom": "tmatic",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "matic",
+            "exponent": 18
+          }
+        ],
+        "base": "tmatic",
+        "symbol": "tMATIC"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://mumbai.polygonscan.com",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://rpc.ankr.com/polygon_mumbai",
+        "type": "evm"
+      }
+    ]
+  },
+  "zeta_testnet": {
+    "chain_id": "70001",
+    "chain_name": "Zeta Testnet",
+    "bech32_prefix": "evmos",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "azeta",
+            "exponent": 0
+          },
+          {
+            "denom": "zeta",
+            "exponent": 18
+          }
+        ],
+        "base": "azeta",
+        "symbol": "ZETA"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://explorer.zetachain.com",
+        "tx": "/cosmos/tx/${tx}",
+        "address": "/address/${address}"
+      },
+      {
+        "type": "explorer",
+        "url": "https://zetachain-athens-2.blockscout.com",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "fees": {
+      "assets": [
+        {
+          "denom": "azeta",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "staking": {
+      "denom": "azeta"
+    },
+    "api": [
+      {
+        "url": "https://rpc.ankr.com/zetachain_evm_testnet",
+        "type": "evm"
+      },
+      {
+        "url": "https://rpc.ankr.com/zetachain_tendermint_testnet",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://rpc.ankr.com/http/zetachain_testnet",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://api.athens2.zetachain.com/evm",
+        "type": "evm-rpc"
+      },
+      {
+        "url": "https://api.athens2.zetachain.com/tendermint",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://api.athens2.zetachain.com/tendermint",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "wss://api-lb.athens2.zetachain.com:26657/websocket",
+        "type": "tendermint-ws"
+      },
+      {
+        "url": "https://api.athens2.zetachain.com/",
+        "type": "cosmos-http"
+      }
+    ]
+  }
+}
