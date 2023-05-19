@@ -13,16 +13,14 @@ export const getHardhatConfigNetworks = (accounts: string[]): any => {
   // Loop through the JSON object and create the required structure
   for (const network in dataJson) {
     let apiUrls = dataJson[network].api;
-    let evmApi = apiUrls.find((api: any) => api.type === "evm");
-    if (evmApi) {
-      config[network] = {
-        accounts,
-        chainId: dataJson[network].chain_id,
-        gas: dataJson[network].fees.assets[0].gas,
-        gasPrice: dataJson[network].fees.assets[0].gas_price,
-        url: evmApi.url,
-      };
-    }
+    let evmApi = apiUrls?.find((api: any) => api.type === "evm");
+    config[network] = {
+      accounts,
+      chainId: dataJson[network].chain_id,
+      gas: dataJson[network].fees.assets[0].gas,
+      gasPrice: dataJson[network].fees.assets[0].gas_price,
+      url: evmApi?.url || "",
+    };
   }
 
   return config;
