@@ -122,5 +122,187 @@
         "type": "cosmos-http"
       }
     ]
+  },
+  "bsc_testnet": {
+    "chain_id": "97",
+    "chain_name": "Binance Smart Chain Testnet",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "bnb",
+            "exponent": 18
+          }
+        ],
+        "base": "bnb",
+        "symbol": "BNB"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://testnet.bscscan.com",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "fees": {
+      "assets": [
+        {
+          "denom": "bnb",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "api": [
+      {
+        "url": "https://data-seed-prebsc-1-s1.binance.org:8545",
+        "type": "evm"
+      }
+    ]
+  },
+  "goerli_testnet": {
+    "chain_id": "5",
+    "chain_name": "Goerli Testnet",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "eth",
+            "exponent": 18
+          }
+        ],
+        "base": "eth",
+        "symbol": "gETH"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://goerli.etherscan.io",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "fees": {
+      "assets": [
+        {
+          "denom": "eth",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "api": [
+      {
+        "url": "https://rpc.ankr.com/eth_goerli",
+        "type": "evm"
+      }
+    ]
+  },
+  "eth_mainnet": {
+    "chain_id": "1",
+    "chain_name": "Ethereum Mainnet",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "eth",
+            "exponent": 18
+          }
+        ],
+        "base": "eth",
+        "symbol": "ETH"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://etherscan.io",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "fees": {
+      "assets": [
+        {
+          "denom": "eth",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "api": [
+      {
+        "url": "https://rpc.ankr.com/eth",
+        "type": "evm"
+      }
+    ]
+  },
+  "baobab_testnet": {
+    "chain_id": "1001",
+    "chain_name": "Klaytn Baobab Testnet",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "peb",
+            "exponent": 0
+          },
+          {
+            "denom": "kpeb",
+            "exponent": 3
+          },
+          {
+            "denom": "mpeb",
+            "exponent": 6
+          },
+          {
+            "denom": "gpeb",
+            "exponent": 9
+          },
+          {
+            "denom": "uklay",
+            "exponent": 12
+          },
+          {
+            "denom": "klay",
+            "exponent": 18
+          }
+        ],
+        "base": "klay",
+        "symbol": "KLAY"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://baobab.scope.klaytn.com/",
+        "tx": "/tx/${tx}",
+        "address": "/account/${address}"
+      }
+    ],
+    "fees": {
+      "assets": [
+        {
+          "denom": "klay",
+          "gas": 6000000,
+          "gas_price": 54250000000
+        }
+      ]
+    }
   }
 }
