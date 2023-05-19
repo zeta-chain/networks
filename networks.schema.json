@@ -6,7 +6,7 @@
       "type": "object",
       "properties": {
         "chain_id": {
-          "type": "string"
+          "type": "integer"
         },
         "chain_name": {
           "type": "string"

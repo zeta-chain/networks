@@ -1,6 +1,6 @@
 {
   "mumbai_testnet": {
-    "chain_id": "80001",
+    "chain_id": 80001,
     "chain_name": "Mumbai Testnet",
     "fees": {
       "assets": [
@@ -43,7 +43,7 @@
     ]
   },
   "zeta_testnet": {
-    "chain_id": "70001",
+    "chain_id": 70001,
     "chain_name": "Zeta Testnet",
     "bech32_prefix": "evmos",
     "assets": [
@@ -124,7 +124,7 @@
     ]
   },
   "bsc_testnet": {
-    "chain_id": "97",
+    "chain_id": 97,
     "chain_name": "Binance Smart Chain Testnet",
     "assets": [
       {
@@ -167,7 +167,7 @@
     ]
   },
   "goerli_testnet": {
-    "chain_id": "5",
+    "chain_id": 5,
     "chain_name": "Goerli Testnet",
     "assets": [
       {
@@ -210,7 +210,7 @@
     ]
   },
   "eth_mainnet": {
-    "chain_id": "1",
+    "chain_id": 1,
     "chain_name": "Ethereum Mainnet",
     "assets": [
       {
@@ -253,7 +253,7 @@
     ]
   },
   "baobab_testnet": {
-    "chain_id": "1001",
+    "chain_id": 1001,
     "chain_name": "Klaytn Baobab Testnet",
     "assets": [
       {
