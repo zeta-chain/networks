@@ -2,32 +2,39 @@ import fs from "fs";
 import path from "path";
 import * as dotenv from "dotenv";
 
+interface Config {
+  [key: string]: {
+    accounts: string[];
+    chainId: number;
+    gas: number;
+    gasPrice: number;
+    url: string;
+  };
+}
+
 export const networks = JSON.parse(
   fs
     .readFileSync(path.resolve(__dirname, "..", "data", "networks.json"))
     .toString()
 );
 
-export const getHardhatConfigNetworks = (): any => {
-  let accounts: string[] = [];
+export const getHardhatConfigNetworks = (): Config => {
+  const validatePrivateKey = (privateKey: string | undefined): string[] => {
+    if (!privateKey) {
+      return [];
+    } else if (privateKey.startsWith("0x")) {
+      throw new Error("PRIVATE_KEY env variable should not start with 0x");
+    } else if (!/^(0x)?[0-9a-fA-F]{64}$/.test(privateKey)) {
+      throw new Error("PRIVATE_KEY env variable is not a valid private key");
+    } else {
+      return [`0x${privateKey}`];
+    }
+  };
 
   dotenv.config();
+  const accounts = validatePrivateKey(process.env.PRIVATE_KEY);
+  const config: Config = {};
 
-  if (!process.env.PRIVATE_KEY) {
-    accounts = [];
-  } else if (
-    typeof process.env.PRIVATE_KEY === "string" &&
-    process.env.PRIVATE_KEY.startsWith("0x")
-  ) {
-    throw new Error("PRIVATE_KEY env variable should not start with 0x");
-  } else if (!/^(0x)?[0-9a-fA-F]{64}$/.test(process.env.PRIVATE_KEY)) {
-    throw new Error("PRIVATE_KEY env variable is not a valid private key");
-  } else {
-    accounts = [`0x${process.env.PRIVATE_KEY}`];
-  }
-
-  const config: any = {};
-  // Loop through the JSON object and create the required structure
   for (const network in networks) {
     let apiUrls = networks[network].api;
     let evmApi = apiUrls?.find((api: any) => api.type === "evm");
