@@ -1,5 +1,16 @@
+import * as dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
+
+interface Config {
+  [key: string]: {
+    accounts: string[];
+    chainId: number;
+    gas: number;
+    gasPrice: number;
+    url: string;
+  };
+}
 
 export const networks = JSON.parse(
   fs
@@ -7,10 +18,23 @@ export const networks = JSON.parse(
     .toString()
 );
 
-export const getHardhatConfigNetworks = (accounts: string[]): any => {
-  const config: any = {};
+export const getHardhatConfigNetworks = (): Config => {
+  const validatePrivateKey = (privateKey: string | undefined): string[] => {
+    if (!privateKey) {
+      return [];
+    } else if (privateKey.startsWith("0x")) {
+      throw new Error("PRIVATE_KEY env variable should not start with 0x");
+    } else if (!/^(0x)?[0-9a-fA-F]{64}$/.test(privateKey)) {
+      throw new Error("PRIVATE_KEY env variable is not a valid private key");
+    } else {
+      return [`0x${privateKey}`];
+    }
+  };
 
-  // Loop through the JSON object and create the required structure
+  dotenv.config();
+  const accounts = validatePrivateKey(process.env.PRIVATE_KEY);
+  const config: Config = {};
+
   for (const network in networks) {
     let apiUrls = networks[network].api;
     let evmApi = apiUrls?.find((api: any) => api.type === "evm");
