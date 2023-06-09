@@ -25,7 +25,7 @@ jobs:
         run: yarn build
 
       - name: Publish to NPM
-        run: yarn publish --new-version ${GITHUB_REF#refs/tags/v}
+        run: yarn publish --new-version ${GITHUB_REF#refs/tags/v} --no-git-tag-version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_REF: ${{ github.ref }}
