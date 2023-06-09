@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import * as dotenv from "dotenv";
 
 export const networks = JSON.parse(
   fs
@@ -7,9 +8,27 @@ export const networks = JSON.parse(
     .toString()
 );
 
-export const getHardhatConfigNetworks = (accounts: string[]): any => {
-  const config: any = {};
+export const getHardhatConfigNetworks = (): any => {
+  let accounts: string[] = [];
 
+  dotenv.config();
+
+  if (!process.env.PRIVATE_KEY) {
+    accounts = [];
+  } else if (
+    typeof process.env.PRIVATE_KEY === "string" &&
+    process.env.PRIVATE_KEY.startsWith("0x")
+  ) {
+    throw new Error("PRIVATE_KEY env variable should not start with 0x");
+  } else if (!/^(0x)?[0-9a-fA-F]{64}$/.test(process.env.PRIVATE_KEY)) {
+    throw new Error("PRIVATE_KEY env variable is not a valid private key");
+  } else {
+    accounts = [`0x${process.env.PRIVATE_KEY}`];
+  }
+
+  console.log(accounts);
+
+  const config: any = {};
   // Loop through the JSON object and create the required structure
   for (const network in networks) {
     let apiUrls = networks[network].api;
