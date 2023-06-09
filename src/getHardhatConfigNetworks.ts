@@ -26,8 +26,6 @@ export const getHardhatConfigNetworks = (): any => {
     accounts = [`0x${process.env.PRIVATE_KEY}`];
   }
 
-  console.log(accounts);
-
   const config: any = {};
   // Loop through the JSON object and create the required structure
   for (const network in networks) {
