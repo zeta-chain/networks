@@ -2,6 +2,44 @@
 
 This registry is a list of blockchain networks connected to ZetaChain.
 
+## Building a dapp on ZetaChain
+
+If you're looking to build a dapp on ZetaChain, we recommend using the Hardhat
+[template](https://github.com/zeta-chain/template). This template has all the
+networks preconfigured, so you don't need to install this package manually.
+
+## Installation
+
+To install this package in Hardhat project, add it as a development dependency:
+
+```
+yarn add --dev @zetachain/networks
+```
+
+## Usage
+
+In your `hardhat.config.ts` file, import the `getHardhatConfigNetworks` function
+from `@zetachain/networks`:
+
+```ts
+import { getHardhatConfigNetworks } from "@zetachain/networks";
+
+const config: HardhatUserConfig = {
+  networks: {
+    ...getHardhatConfigNetworks(),
+  },
+};
+```
+
+In this configuration, the `getHardhatConfigNetworks` function returns all
+available networks from ZetaChain and spreads them into the `networks` object.
+This way, the Hardhat environment is configured to interact with all the
+networks connected to ZetaChain.
+
+`getHardhatConfigNetworks` reads the private key from `PRIVATE_KEY` environment
+variable and defaults to an empty account array if the variable not set, and
+throws an error if the private key is invalid.
+
 ## Prerequisites
 
 Before getting started, ensure that you have
