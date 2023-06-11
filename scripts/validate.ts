@@ -18,5 +18,6 @@ const valid = validate(jsonData);
 if (valid) {
   console.log("JSON data is valid");
 } else {
-  console.log("JSON data is invalid. Errors:", validate.errors);
+  console.error("JSON data is invalid. Errors:", validate.errors);
+  process.exit(1);
 }
