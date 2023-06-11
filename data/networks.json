@@ -1,5 +1,6 @@
 {
   "mumbai_testnet": {
+    "chain_id": 80001,
     "chain_name": "Mumbai Testnet",
     "fees": {
       "assets": [
