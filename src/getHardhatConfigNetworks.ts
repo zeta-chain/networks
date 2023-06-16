@@ -1,6 +1,6 @@
+import * as dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
-import * as dotenv from "dotenv";
 
 interface Config {
   [key: string]: {
@@ -54,10 +54,10 @@ export const getHardhatConfigNetworks = (): Config => {
 // used by @zetachain/addresses
 export const chainNameById = (chainId: number): any => {
   return {
-    7001: "athens",
-    97: "bsc-testnet",
-    5: "goerli",
     1001: "klaytn-baobab",
+    5: "goerli",
+    7001: "athens",
     80001: "polygon-mumbai",
+    97: "bsc-testnet",
   }[chainId];
 };
