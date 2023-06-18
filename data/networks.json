@@ -43,9 +43,9 @@
     ]
   },
   "zeta_testnet": {
-    "chain_id": 70001,
+    "chain_id": 7001,
     "chain_name": "Zeta Testnet",
-    "bech32_prefix": "evmos",
+    "bech32_prefix": "zeta",
     "assets": [
       {
         "denoms": [
