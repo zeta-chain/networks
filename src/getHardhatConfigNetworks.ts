@@ -4,11 +4,11 @@ import path from "path";
 
 interface Config {
   [key: string]: {
-    accounts: string[];
+    accounts?: string[];
     chainId: number;
-    gas: number;
-    gasPrice: number;
-    url: string;
+    gas?: number;
+    gasPrice?: number;
+    url?: string;
   };
 }
 
@@ -19,6 +19,10 @@ export const networks = JSON.parse(
 );
 
 export const getHardhatConfigNetworks = (): Config => {
+  const hardhat = {
+    chainId: 1337,
+    forking: { blockNumber: 14672712, url: "https://rpc.ankr.com/eth" },
+  };
   const validatePrivateKey = (privateKey: string | undefined): string[] => {
     if (!privateKey) {
       return [];
@@ -47,7 +51,7 @@ export const getHardhatConfigNetworks = (): Config => {
     };
   }
 
-  return config;
+  return { ...config, hardhat };
 };
 
 // Temporary function that maps chain IDs to the old chain names
