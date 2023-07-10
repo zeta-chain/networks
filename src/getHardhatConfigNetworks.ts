@@ -18,6 +18,12 @@ export const networks = JSON.parse(
     .toString()
 );
 
+/**
+ * Generate a configuration object for Hardhat with networks supported by
+ * ZetaChain. PRIVATE_KEY is read from the environment variable.
+ *
+ * @returns {Config} Configuration object for Hardhat.
+ */
 export const getHardhatConfigNetworks = (): Config => {
   const hardhat = {
     chainId: 1337,
