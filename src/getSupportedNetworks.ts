@@ -23,8 +23,14 @@ export const getSupportedNetworks = (type?: NetworkType): string[] => {
   let supportedNetworks = Object.keys(networks);
 
   if (type === NetworkType.CCM) {
+    const excluded = [
+      "btc_testnet",
+      "zeta_testnet",
+      "baobab_testnet", // TODO: remove when baobab is supported
+      "eth_mainnet", // TODO: remove when eth_mainnet is supported
+    ];
     supportedNetworks = supportedNetworks.filter(
-      (network) => network !== "btc_testnet" && network !== "zeta_testnet"
+      (network) => !excluded.includes(network)
     );
   }
 
