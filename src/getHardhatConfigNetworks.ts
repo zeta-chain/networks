@@ -1,4 +1,5 @@
 import * as dotenv from "dotenv";
+
 import { networks } from "./networks";
 
 interface Config {

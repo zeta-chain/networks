@@ -1,5 +1,5 @@
 import { networks } from "./networks";
-import { ApiType, Api } from "./types";
+import { Api, ApiType } from "./types";
 
 /**
  * Returns the endpoints of a specified type from a specified network.
