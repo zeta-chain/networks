@@ -1,4 +1,4 @@
-name: Validate Networks JSON
+name: Build
 
 on:
   pull_request:
