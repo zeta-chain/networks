@@ -10,7 +10,9 @@
         "cosmos-http",
         "tendermint-ws",
         "cosmos-grpc",
-        "evm-ws"
+        "evm-ws",
+        "blockcypher",
+        "esplora"
       ]
     },
     "api": {

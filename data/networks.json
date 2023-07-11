@@ -42,6 +42,36 @@
       }
     ]
   },
+  "btc_testnet": {
+    "chain_id": 1,
+    "chain_name": "Bitcoin Testnet",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "sat",
+            "exponent": 0
+          },
+          {
+            "denom": "btc",
+            "exponent": 8
+          }
+        ],
+        "base": "btc",
+        "symbol": "tBTC"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://blockstream.info/testnet/api",
+        "type": "esplora"
+      },
+      {
+        "url": "https://api.blockcypher.com/v1/btc/test3",
+        "type": "blockcypher"
+      }
+    ]
+  },
   "zeta_testnet": {
     "chain_id": 7001,
     "chain_name": "Zeta Testnet",
