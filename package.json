@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "output": "npx ts-node scripts/output.ts",
     "validate": "npx ts-node scripts/validate.ts",
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf dist && yarn generate:types && tsc",
     "lint:fix": "npx eslint . --ext .js,.ts --fix",
     "lint": "npx eslint . --ext .js,.ts",
     "prepublishOnly": "npm run build",
