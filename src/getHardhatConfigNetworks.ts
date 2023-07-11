@@ -40,6 +40,7 @@ export const getHardhatConfigNetworks = (): Config => {
   const config: Config = {};
 
   for (const network in networks) {
+    if (network === "btc_testnet") continue;
     let apiUrls = networks[network].api;
     let evmApi = apiUrls?.find((api: any) => api.type === "evm");
     config[network] = {

@@ -5,7 +5,15 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type ApiType = "evm" | "tendermint-rpc" | "cosmos-http" | "tendermint-ws" | "cosmos-grpc" | "evm-ws";
+export type ApiType =
+  | "evm"
+  | "tendermint-rpc"
+  | "cosmos-http"
+  | "tendermint-ws"
+  | "cosmos-grpc"
+  | "evm-ws"
+  | "blockcypher"
+  | "esplora";
 
 export interface NetworksSchema {
   /**
