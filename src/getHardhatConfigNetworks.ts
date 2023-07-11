@@ -1,6 +1,5 @@
 import * as dotenv from "dotenv";
-import fs from "fs";
-import path from "path";
+import { networks } from "./networks";
 
 interface Config {
   [key: string]: {
@@ -11,12 +10,6 @@ interface Config {
     url?: string;
   };
 }
-
-export const networks = JSON.parse(
-  fs
-    .readFileSync(path.resolve(__dirname, "..", "data", "networks.json"))
-    .toString()
-);
 
 /**
  * Generate a configuration object for Hardhat with networks supported by

@@ -1,6 +1,34 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "definitions": {
+    "api_type": {
+      "type": "string",
+      "enum": [
+        "evm",
+        "tendermint-rpc",
+        "cosmos-http",
+        "tendermint-ws",
+        "cosmos-grpc",
+        "evm-ws"
+      ]
+    },
+    "api": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/api_type"
+        }
+      },
+      "required": [
+        "url",
+        "type"
+      ]
+    }
+  },
   "patternProperties": {
     "^.*$": {
       "type": "object",
@@ -115,19 +143,7 @@
         "api": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "url": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "url",
-              "type"
-            ]
+            "$ref": "#/definitions/api"
           }
         }
       },
