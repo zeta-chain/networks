@@ -8,6 +8,12 @@ If you're looking to build a dapp on ZetaChain, we recommend using the Hardhat
 [template](https://github.com/zeta-chain/template). This template has all the
 networks preconfigured, so you don't need to install this package manually.
 
+## Prerequisites
+
+Before getting started, ensure that you have
+[Node.js](https://nodejs.org/en/download) and [Yarn](https://yarnpkg.com/)
+installed on your system.
+
 ## Installation
 
 To install this package in Hardhat project, add it as a development dependency:
@@ -39,12 +45,6 @@ networks connected to ZetaChain.
 `getHardhatConfigNetworks` reads the private key from `PRIVATE_KEY` environment
 variable and defaults to an empty account array if the variable not set, and
 throws an error if the private key is invalid.
-
-## Prerequisites
-
-Before getting started, ensure that you have
-[Node.js](https://nodejs.org/en/download) and [Yarn](https://yarnpkg.com/)
-installed on your system.
 
 ## Network List Validation
 

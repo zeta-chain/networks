@@ -1,24 +1,28 @@
 import * as dotenv from "dotenv";
-import fs from "fs";
-import path from "path";
+
+import { networks } from "./networks";
 
 interface Config {
   [key: string]: {
-    accounts: string[];
+    accounts?: string[];
     chainId: number;
-    gas: number;
-    gasPrice: number;
-    url: string;
+    gas?: number;
+    gasPrice?: number;
+    url?: string;
   };
 }
 
-export const networks = JSON.parse(
-  fs
-    .readFileSync(path.resolve(__dirname, "..", "data", "networks.json"))
-    .toString()
-);
-
+/**
+ * Generate a configuration object for Hardhat with networks supported by
+ * ZetaChain. PRIVATE_KEY is read from the environment variable.
+ *
+ * @returns {Config} Configuration object for Hardhat.
+ */
 export const getHardhatConfigNetworks = (): Config => {
+  const hardhat = {
+    chainId: 1337,
+    forking: { blockNumber: 14672712, url: "https://rpc.ankr.com/eth" },
+  };
   const validatePrivateKey = (privateKey: string | undefined): string[] => {
     if (!privateKey) {
       return [];
@@ -36,6 +40,7 @@ export const getHardhatConfigNetworks = (): Config => {
   const config: Config = {};
 
   for (const network in networks) {
+    if (network === "btc_testnet") continue;
     let apiUrls = networks[network].api;
     let evmApi = apiUrls?.find((api: any) => api.type === "evm");
     config[network] = {
@@ -47,17 +52,5 @@ export const getHardhatConfigNetworks = (): Config => {
     };
   }
 
-  return config;
-};
-
-// Temporary function that maps chain IDs to the old chain names
-// used by @zetachain/addresses
-export const chainNameById = (chainId: number): any => {
-  return {
-    1001: "klaytn-baobab",
-    5: "goerli",
-    7001: "athens",
-    80001: "polygon-mumbai",
-    97: "bsc-testnet",
-  }[chainId];
+  return { ...config, hardhat };
 };

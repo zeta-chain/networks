@@ -42,6 +42,36 @@
       }
     ]
   },
+  "btc_testnet": {
+    "chain_id": 1,
+    "chain_name": "Bitcoin Testnet",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "sat",
+            "exponent": 0
+          },
+          {
+            "denom": "btc",
+            "exponent": 8
+          }
+        ],
+        "base": "btc",
+        "symbol": "tBTC"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://blockstream.info/testnet/api",
+        "type": "esplora"
+      },
+      {
+        "url": "https://api.blockcypher.com/v1/btc/test3",
+        "type": "blockcypher"
+      }
+    ]
+  },
   "zeta_testnet": {
     "chain_id": 7001,
     "chain_name": "Zeta Testnet",
@@ -90,36 +120,32 @@
     },
     "api": [
       {
-        "url": "https://rpc.ankr.com/zetachain_evm_testnet",
+        "url": "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
       {
-        "url": "https://rpc.ankr.com/zetachain_tendermint_testnet",
+        "url": "https://zetachain-athens.blockpi.network/rpc/v1/public",
         "type": "tendermint-rpc"
       },
       {
-        "url": "https://rpc.ankr.com/http/zetachain_testnet",
+        "url": "https://zetachain-athens.blockpi.network/lcd/v1/public",
         "type": "cosmos-http"
       },
       {
-        "url": "https://api.athens2.zetachain.com/evm",
-        "type": "evm-rpc"
-      },
-      {
-        "url": "https://api.athens2.zetachain.com/tendermint",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://api.athens2.zetachain.com/tendermint",
-        "type": "tendermint-http"
-      },
-      {
-        "url": "wss://api-lb.athens2.zetachain.com:26657/websocket",
+        "url": "wss://zetachain-athens.blockpi.network/rpc/v1/public/websocket",
         "type": "tendermint-ws"
       },
       {
-        "url": "https://api.athens2.zetachain.com/",
+        "url": "https://zetachain-testnet.nodejumper.io:443",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://zetachain-testnet.nodejumper.io:1317",
         "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-testnet.nodejumper.io:9090",
+        "type": "cosmos-grpc"
       }
     ]
   },
