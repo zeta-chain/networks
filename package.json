@@ -2,8 +2,8 @@
   "name": "@zetachain/networks",
   "version": "0.0.0-set-on-publish",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "output": "npx ts-node scripts/output.ts",
     "validate": "npx ts-node scripts/validate.ts",
@@ -38,7 +38,6 @@
     "dotenv": "^16.1.4"
   },
   "files": [
-    "dist",
-    "data"
+    "dist"
   ]
 }

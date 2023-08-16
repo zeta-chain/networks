@@ -3,7 +3,6 @@
     "target": "es2020",
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -11,6 +10,6 @@
     "resolveJsonModule": true,
     "moduleResolution": "node"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "data/**/*.json"],
   "exclude": ["node_modules"]
 }

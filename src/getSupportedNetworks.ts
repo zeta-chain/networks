@@ -1,4 +1,4 @@
-import { networks } from "./networks";
+import networks from "./networks";
 
 /**
  * Retrieves the list of supported networks. If a network type is provided, the

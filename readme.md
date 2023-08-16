@@ -46,6 +46,30 @@ networks connected to ZetaChain.
 variable and defaults to an empty account array if the variable not set, and
 throws an error if the private key is invalid.
 
+### In a Browser Environment
+
+`@zetachain/networks` is released as a CommonJS project to work out of the box
+with the current version of Hardhat. You can use it in a browser environment by
+using a bundler like [Vite](https://vitejs.dev).
+
+`vite.config.ts`:
+
+```ts
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  optimizeDeps: {
+    include: ["@zetachain/networks"],
+  },
+});
+```
+
+You can now use `@zetachain/networks` in your browser environment:
+
+```ts
+import { getHardhatConfigNetworks } from "@zetachain/networks";
+```
+
 ## Network List Validation
 
 If you modify the list of networks, it's crucial that the updated list aligns
