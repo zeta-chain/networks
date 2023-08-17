@@ -146,6 +146,22 @@
       {
         "url": "https://zetachain-testnet.nodejumper.io:9090",
         "type": "cosmos-grpc"
+      },
+      {
+        "url": "https://rpc.ankr.com/zetachain_evm_athens_testnet",
+        "type": "evm"
+      },
+      {
+        "url": "https://rpc.ankr.com/zetachain_tendermint_athens_testnet",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://rpc.ankr.com/http/zetachain_tendermint_athens_testnet",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "https://rpc.ankr.com/http/zetachain_athens_testnet",
+        "type": "cosmos-http"
       }
     ]
   },
