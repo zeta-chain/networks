@@ -1,8 +1,3 @@
-import fs from "fs";
-import path from "path";
+import networks from "../data/networks.json";
 
-export const networks = JSON.parse(
-  fs
-    .readFileSync(path.resolve(__dirname, "..", "data", "networks.json"))
-    .toString()
-);
+export default networks;

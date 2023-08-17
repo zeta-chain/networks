@@ -1,4 +1,4 @@
 export * from "./getEndpoints";
 export * from "./getHardhatConfigNetworks";
 export * from "./getSupportedNetworks";
-export * from "./networks";
+export { default as networks } from "./networks";

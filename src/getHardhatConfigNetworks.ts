@@ -1,6 +1,5 @@
 import * as dotenv from "dotenv";
-
-import { networks } from "./networks";
+import networks from "./networks";
 
 interface Config {
   [key: string]: {
@@ -12,17 +11,12 @@ interface Config {
   };
 }
 
-/**
- * Generate a configuration object for Hardhat with networks supported by
- * ZetaChain. PRIVATE_KEY is read from the environment variable.
- *
- * @returns {Config} Configuration object for Hardhat.
- */
 export const getHardhatConfigNetworks = (): Config => {
   const hardhat = {
     chainId: 1337,
     forking: { blockNumber: 14672712, url: "https://rpc.ankr.com/eth" },
   };
+
   const validatePrivateKey = (privateKey: string | undefined): string[] => {
     if (!privateKey) {
       return [];
@@ -39,15 +33,15 @@ export const getHardhatConfigNetworks = (): Config => {
   const accounts = validatePrivateKey(process.env.PRIVATE_KEY);
   const config: Config = {};
 
-  for (const network in networks) {
+  for (const network in networks as any) {
     if (network === "btc_testnet") continue;
-    let apiUrls = networks[network].api;
+    let apiUrls = (networks as any)[network].api;
     let evmApi = apiUrls?.find((api: any) => api.type === "evm");
     config[network] = {
       accounts,
-      chainId: networks[network].chain_id,
-      gas: networks[network].fees.assets[0].gas,
-      gasPrice: networks[network].fees.assets[0].gas_price,
+      chainId: (networks as any)[network].chain_id,
+      gas: (networks as any)[network].fees.assets[0].gas,
+      gasPrice: (networks as any)[network].fees.assets[0].gas_price,
       url: evmApi?.url || "",
     };
   }

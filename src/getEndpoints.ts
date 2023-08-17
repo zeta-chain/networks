@@ -1,4 +1,4 @@
-import { networks } from "./networks";
+import networks from "./networks";
 import { Api, ApiType } from "./types";
 
 /**
@@ -11,9 +11,9 @@ import { Api, ApiType } from "./types";
  * does not exist, throws an error. If no matching endpoints are found, returns an empty array.
  */
 export const getEndpoints = (type: ApiType, network: string): Api[] => {
-  if (!networks[network]) {
+  if (!(networks as any)[network]) {
     throw new Error(`Network ${network} does not exist.`);
   }
 
-  return networks[network].api.filter((api: Api) => api.type === type);
+  return (networks as any)[network].api.filter((api: Api) => api.type === type);
 };
