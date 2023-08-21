@@ -101,7 +101,7 @@
       },
       {
         "type": "explorer",
-        "url": "https://zetachain-athens-2.blockscout.com",
+        "url": "https://zetachain-athens-3.blockscout.com",
         "tx": "/tx/${tx}",
         "address": "/address/${address}"
       }

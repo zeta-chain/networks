@@ -8,6 +8,7 @@
 export type ApiType =
   | "evm"
   | "tendermint-rpc"
+  | "tendermint-http"
   | "cosmos-http"
   | "tendermint-ws"
   | "cosmos-grpc"
