@@ -203,6 +203,10 @@
     },
     "api": [
       {
+        "url": "https://bsc-testnet.blockpi.network/v1/rpc/public",
+        "type": "evm"
+      },
+      {
         "url": "https://data-seed-prebsc-1-s1.binance.org:8545",
         "type": "evm"
       }
