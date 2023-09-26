@@ -162,6 +162,22 @@
       {
         "url": "https://rpc.ankr.com/http/zetachain_athens_testnet",
         "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-evm-athens-testnet-public.unifra.io",
+        "type": "evm"
+      },
+      {
+        "url": " https://zetachain-tendermint-rpc-athens-testnet-public.unifra.io",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://zetachain-tendermint-http-athens-testnet-public.unifra.io",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "https://zetachain-cosmos-sdk-http-athens-testnet-public.unifra.io",
+        "type": "cosmos-http"
       }
     ]
   },
