@@ -168,7 +168,7 @@
         "type": "evm"
       },
       {
-        "url": " https://zetachain-tendermint-rpc-athens-testnet-public.unifra.io",
+        "url": "https://zetachain-tendermint-rpc-athens-testnet-public.unifra.io",
         "type": "tendermint-rpc"
       },
       {
