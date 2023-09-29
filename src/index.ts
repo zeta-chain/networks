@@ -1,5 +1,5 @@
 export * from "./getEndpoints";
+export * from "./getExplorers";
 export * from "./getHardhatConfigNetworks";
 export * from "./getSupportedNetworks";
-export * from "./getExplorers";
 export { default as networks } from "./networks";

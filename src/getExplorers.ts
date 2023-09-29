@@ -1,5 +1,5 @@
-import { NetworksSchema } from "./types";
 import networks from "./networks";
+import { NetworksSchema } from "./types";
 
 export const getExplorers = (
   input: string,
