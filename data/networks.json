@@ -1,6 +1,19 @@
 {
   "mumbai_testnet": {
     "chain_id": 80001,
+    "chain_aliases": [
+      "mumbai",
+      "polygon_mumbai",
+      "polygon_testnet",
+      "mumbai_chain",
+      "mumbai_network",
+      "polygon-mumbai",
+      "polygon-testnet",
+      "mumbai-chain",
+      "mumbai-network",
+      "mumbai-testnet",
+      "maticmum"
+    ],
     "chain_name": "Mumbai Testnet",
     "fees": {
       "assets": [
@@ -45,6 +58,10 @@
   "btc_testnet": {
     "chain_id": 1,
     "chain_name": "Bitcoin Testnet",
+    "chain_aliases": [
+      "tbtc",
+      "btc-testnet"
+    ],
     "assets": [
       {
         "denoms": [
@@ -161,6 +178,15 @@
   "zeta_testnet": {
     "chain_id": 7001,
     "chain_name": "Zeta Testnet",
+    "chain_aliases": [
+      "zeta",
+      "zeta_chain",
+      "zeta_network",
+      "zeta-chain",
+      "zeta-network",
+      "zeta-testnet",
+      "athens"
+    ],
     "bech32_prefix": "zeta",
     "assets": [
       {
@@ -270,6 +296,12 @@
   "bsc_testnet": {
     "chain_id": 97,
     "chain_name": "Binance Smart Chain Testnet",
+    "chain_aliases": [
+      "bsc",
+      "bsc-testnet",
+      "bsc-chain",
+      "bsc-network"
+    ],
     "assets": [
       {
         "denoms": [
@@ -317,6 +349,14 @@
   "goerli_testnet": {
     "chain_id": 5,
     "chain_name": "Goerli Testnet",
+    "chain_aliases": [
+      "goerli",
+      "goerli_chain",
+      "goerli_network",
+      "goerli-chain",
+      "goerli-network",
+      "goerli-testnet"
+    ],
     "assets": [
       {
         "denoms": [
