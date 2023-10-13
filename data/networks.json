@@ -180,12 +180,13 @@
     "chain_name": "Zeta Testnet",
     "chain_aliases": [
       "zeta",
+      "athens",
       "zeta_chain",
       "zeta_network",
       "zeta-chain",
       "zeta-network",
       "zeta-testnet",
-      "athens"
+      "zetachain-athens-testnet"
     ],
     "bech32_prefix": "zeta",
     "assets": [
