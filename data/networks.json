@@ -291,6 +291,22 @@
       {
         "url": "https://zetachain-cosmos-sdk-http-athens-testnet-public.unifra.io",
         "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-testnet-rpc.itrocket.net",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://zetachain-testnet-api.itrocket.net",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-testnet-evm.itrocket.net",
+        "type": "evm"
+      },
+      {
+        "url": "https://zetachain-testnet-grpc.itrocket.net:14090",
+        "type": "cosmos-grpc"
       }
     ]
   },
