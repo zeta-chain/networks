@@ -307,6 +307,18 @@
       {
         "url": "https://zetachain-testnet-grpc.itrocket.net:14090",
         "type": "cosmos-grpc"
+      },
+      {
+        "url": "https://zetachain-rpc.f5nodes.com",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://zetachain-api.f5nodes.com",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "zetachain-grpc.f5nodes.com",
+        "type": "cosmos-grpc"
       }
     ]
   },
