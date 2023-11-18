@@ -70,7 +70,7 @@ jobs:
           else
             echo "⏭️ Skipping unsupported endpoint type: $type"
             status_check="skip"
-        fi
+          fi
 
           if [ "$status_check" = "true" ]; then
               echo "✅ $url - Successful"
