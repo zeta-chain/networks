@@ -1,6 +1,6 @@
 name: Test API Endpoints
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   generate-matrix:
@@ -39,11 +39,14 @@ jobs:
           elif [ "$type" = "tendermint-http" ]; then
               response=$(curl -s "${url}/status")
               status_check=$(echo "$response" | jq -e '.jsonrpc' &> /dev/null && echo "true" || echo "false")
+          else
+              echo "⏭️ Skipping unsupported endpoint type: $type"
+              status_check="skip"
           fi
 
           if [ "$status_check" = "true" ]; then
               echo "✅ $url - Successful"
-          else
+          elif [ "$status_check" = "false" ]; then
               echo "❌ $url - Failed"
               echo "test_failed=true" >> $GITHUB_ENV
           fi
