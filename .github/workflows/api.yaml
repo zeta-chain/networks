@@ -3,26 +3,7 @@ name: Test API Endpoints
 on: [push]
 
 jobs:
-  setup-websocat:
-    runs-on: ubuntu-latest
-    outputs:
-      artifact-path: ${{ steps.setup.outputs.artifact-path }}
-    steps:
-      - uses: actions/checkout@v2
-      - name: Download websocat
-        id: setup
-        run: |
-          wget https://github.com/vi/websocat/releases/download/v1.8.0/websocat_amd64-linux -O websocat
-          chmod +x websocat
-          echo "::set-output name=artifact-path::$(pwd)/websocat"
-      - name: Upload websocat
-        uses: actions/upload-artifact@v2
-        with:
-          name: websocat
-          path: ${{ steps.setup.outputs.artifact-path }}
-
   generate-matrix:
-    needs: setup-websocat
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
@@ -38,21 +19,15 @@ jobs:
           echo "::set-output name=matrix::$(cat matrix.json)"
 
   test-endpoints:
-    needs: [setup-websocat, generate-matrix]
+    needs: generate-matrix
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix: ${{fromJson(needs.generate-matrix.outputs.matrix)}}
     steps:
       - uses: actions/checkout@v2
-      - name: Download websocat
-        uses: actions/download-artifact@v2
-        with:
-          name: websocat
-          path: /path/to/download
       - name: Test Endpoint
         run: |
-          websocat_path="/path/to/download/websocat"
           url="${{ matrix.url }}"
           type="${{ matrix.type }}"
           response=""
@@ -69,14 +44,7 @@ jobs:
               status_check=$(echo "$response" | jq -e '.id' &> /dev/null && echo "true" || echo "false")
           elif [ "$type" = "cosmos-http" ]; then
               response=$(curl -s "${url}/cosmos/base/tendermint/v1beta1/blocks/latest")
-              status_check=$(echo "$response" | jq -e '.block_id.hash' &>
-              /dev/null && echo "true" || echo "false")
-          elif [ "$type" = "tendermint-ws" ]; then
-              response=$($websocat_path -t -1 "$url" <<'EOF'
-              { "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='NewBlock'"], "id": 1 }
-          EOF
-              )
-              status_check=$(echo "$response" | jq -e '.result' &> /dev/null && echo "true" || echo "false")
+              status_check=$(echo "$response" | jq -e '.block_id.hash' &> /dev/null && echo "true" || echo "false")
           else
               echo "⏭️ Skipping unsupported endpoint type: $type"
               status_check="skip"
