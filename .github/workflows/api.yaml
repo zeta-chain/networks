@@ -62,14 +62,15 @@ jobs:
               status_check=$(echo "$response" | jq -e '.block_id.hash' &>
               /dev/null && echo "true" || echo "false")
           elif [ "$type" = "tendermint-ws" ]; then
-              response=$(echo '{ "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='\'NewBlock'\'"], "id": 1 }' | $websocat_path -t -1 "$url")
-              status_check=$(echo "$response" | jq -e '.result' &> /dev/null && echo "true" || echo "false")
-          fi
-
+            response=$($websocat_path -t -1 "$url" <<'EOF'
+              { "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='NewBlock'"], "id": 1 }
+              EOF
+              )
+            status_check=$(echo "$response" | jq -e '.result' &> /dev/null && echo "true" || echo "false")
           else
-              echo "⏭️ Skipping unsupported endpoint type: $type"
-              status_check="skip"
-          fi
+            echo "⏭️ Skipping unsupported endpoint type: $type"
+            status_check="skip"
+        fi
 
           if [ "$status_check" = "true" ]; then
               echo "✅ $url - Successful"
