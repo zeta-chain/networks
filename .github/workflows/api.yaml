@@ -9,12 +9,12 @@ jobs:
       artifact-path: ${{ steps.setup.outputs.artifact-path }}
     steps:
       - uses: actions/checkout@v2
-      - name: Install websocat
+      - name: Download websocat
         id: setup
         run: |
-          sudo apt-get update
-          sudo apt-get install -y websocat
-          echo "::set-output name=artifact-path::$(which websocat)"
+          wget https://github.com/vi/websocat/releases/download/v1.8.0/websocat_amd64-linux -O websocat
+          chmod +x websocat
+          echo "::set-output name=artifact-path::$(pwd)/websocat"
 
   generate-matrix:
     needs: setup-websocat
@@ -62,7 +62,7 @@ jobs:
               status_check=$(echo "$response" | jq -e '.block_id.hash' &>
               /dev/null && echo "true" || echo "false")
           elif [ "$type" = "tendermint-ws" ]; then
-              response=$(echo '{ "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='\'NewBlock'\'"], "id": 1 }' | $websocat_path -t "$url")
+              response=$(echo '{ "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='\'NewBlock'\'"], "id": 1 }' | $websocat_path -t -1 "$url")
               status_check=$(echo "$response" | jq -e '.result' &> /dev/null && echo "true" || echo "false")
           fi
 
