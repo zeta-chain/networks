@@ -15,6 +15,11 @@ jobs:
           wget https://github.com/vi/websocat/releases/download/v1.8.0/websocat_amd64-linux -O websocat
           chmod +x websocat
           echo "::set-output name=artifact-path::$(pwd)/websocat"
+      - name: Upload websocat
+        uses: actions/upload-artifact@v2
+        with:
+          name: websocat
+          path: ${{ steps.setup.outputs.artifact-path }}
 
   generate-matrix:
     needs: setup-websocat
@@ -40,9 +45,14 @@ jobs:
       matrix: ${{fromJson(needs.generate-matrix.outputs.matrix)}}
     steps:
       - uses: actions/checkout@v2
+      - name: Download websocat
+        uses: actions/download-artifact@v2
+        with:
+          name: websocat
+          path: /path/to/download
       - name: Test Endpoint
         run: |
-          websocat_path=${{ needs.setup-websocat.outputs.artifact-path }}
+          websocat_path="/path/to/download/websocat"
           url="${{ matrix.url }}"
           type="${{ matrix.type }}"
           response=""
