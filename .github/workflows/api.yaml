@@ -1,4 +1,4 @@
-name: Test API Endpoints
+name: API
 
 on: [push]
 
@@ -18,7 +18,7 @@ jobs:
           echo "{ \"include\": $MATRIX }" > matrix.json
           echo "::set-output name=matrix::$(cat matrix.json)"
 
-  test-endpoints:
+  test:
     needs: generate-matrix
     runs-on: ubuntu-latest
     strategy:
