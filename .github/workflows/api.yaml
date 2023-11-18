@@ -15,7 +15,8 @@ jobs:
         id: set-matrix
         run: |
           MATRIX=$(jq -c '[.[] | .api[] | {url: .url, type: .type}]' data/networks.json)
-          echo "::set-output name=matrix::{\"include\":$MATRIX}"
+          echo "{ \"include\": $MATRIX }" > matrix.json
+          echo "::set-output name=matrix::$(cat matrix.json)"
 
   test-endpoints:
     needs: generate-matrix
@@ -23,31 +24,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix: ${{fromJson(needs.generate-matrix.outputs.matrix)}}
-    outputs:
-      test-success: ${{ steps.test-endpoint.outputs.test-success }}
     steps:
       - uses: actions/checkout@v2
       - name: Test Endpoint
-        id: test-endpoint
         run: |
           url="${{ matrix.url }}"
           type="${{ matrix.type }}"
-          test_success="true"
-
-          if [ "$type" = "evm" ]; then
-              response=$(curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' "$url")
-              if echo "$response" | jq -e .id &> /dev/null; then
-                  echo "✅ $url - Successful"
-              else
-                  echo "❌ $url - Failed"
-                  test_success="false"
-              fi
+          response=$(curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' "$url")
+          if echo "$response" | jq -e .id &> /dev/null; then
+              echo "✅ $url - Successful"
+          else
+              echo "❌ $url - Failed"
+              echo "test_failed=true" >> $GITHUB_ENV
           fi
-          # Add more logic here for different types if needed
-
-          echo "test-success=$test_success" >> $GITHUB_ENV
-          echo "::set-output name=test-success::$test_success"
 
       - name: Check Test Results
-        if: ${{ needs.test-endpoints.outputs.test-success != 'true' }}
+        if: ${{ env.test_failed == 'true' }}
         run: exit 1
