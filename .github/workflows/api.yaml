@@ -1,6 +1,10 @@
 name: API
 
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight
+  workflow_dispatch:
 
 jobs:
   generate-matrix:
