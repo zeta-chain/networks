@@ -3,7 +3,21 @@ name: Test API Endpoints
 on: [push]
 
 jobs:
+  setup-websocat:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact-path: ${{ steps.setup.outputs.artifact-path }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install websocat
+        id: setup
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y websocat
+          echo "::set-output name=artifact-path::$(which websocat)"
+
   generate-matrix:
+    needs: setup-websocat
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
@@ -19,7 +33,7 @@ jobs:
           echo "::set-output name=matrix::$(cat matrix.json)"
 
   test-endpoints:
-    needs: generate-matrix
+    needs: [setup-websocat, generate-matrix]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -28,6 +42,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Test Endpoint
         run: |
+          websocat_path=${{ needs.setup-websocat.outputs.artifact-path }}
           url="${{ matrix.url }}"
           type="${{ matrix.type }}"
           response=""
@@ -44,7 +59,13 @@ jobs:
               status_check=$(echo "$response" | jq -e '.id' &> /dev/null && echo "true" || echo "false")
           elif [ "$type" = "cosmos-http" ]; then
               response=$(curl -s "${url}/cosmos/base/tendermint/v1beta1/blocks/latest")
-              status_check=$(echo "$response" | jq -e '.block_id.hash' &> /dev/null && echo "true" || echo "false")
+              status_check=$(echo "$response" | jq -e '.block_id.hash' &>
+              /dev/null && echo "true" || echo "false")
+          elif [ "$type" = "tendermint-ws" ]; then
+              response=$(echo '{ "jsonrpc": "2.0", "method": "subscribe", "params": ["tm.event='\'NewBlock'\'"], "id": 1 }' | $websocat_path -t "$url")
+              status_check=$(echo "$response" | jq -e '.result' &> /dev/null && echo "true" || echo "false")
+          fi
+
           else
               echo "⏭️ Skipping unsupported endpoint type: $type"
               status_check="skip"
