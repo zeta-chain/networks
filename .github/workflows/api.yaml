@@ -30,8 +30,18 @@ jobs:
         run: |
           url="${{ matrix.url }}"
           type="${{ matrix.type }}"
-          response=$(curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' "$url")
-          if echo "$response" | jq -e .id &> /dev/null; then
+          response=""
+          status_check="false"
+
+          if [ "$type" = "evm" ]; then
+              response=$(curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' "$url")
+              status_check=$(echo "$response" | jq -e '.id' &> /dev/null && echo "true" || echo "false")
+          elif [ "$type" = "tendermint-http" ]; then
+              response=$(curl -s "${url}/status")
+              status_check=$(echo "$response" | jq -e '.jsonrpc' &> /dev/null && echo "true" || echo "false")
+          fi
+
+          if [ "$status_check" = "true" ]; then
               echo "✅ $url - Successful"
           else
               echo "❌ $url - Failed"
