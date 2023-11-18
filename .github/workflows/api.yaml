@@ -42,6 +42,9 @@ jobs:
           elif [ "$type" = "tendermint-rpc" ]; then
               response=$(curl -s --header "Content-Type: application/json" --request POST --data '{"method": "status", "params": [], "id": 1}' "$url")
               status_check=$(echo "$response" | jq -e '.id' &> /dev/null && echo "true" || echo "false")
+          elif [ "$type" = "cosmos-http" ]; then
+              response=$(curl -s "${url}/cosmos/base/tendermint/v1beta1/blocks/latest")
+              status_check=$(echo "$response" | jq -e '.block_id.hash' &> /dev/null && echo "true" || echo "false")
           else
               echo "⏭️ Skipping unsupported endpoint type: $type"
               status_check="skip"
