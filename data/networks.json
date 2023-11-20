@@ -249,16 +249,12 @@
         "type": "tendermint-ws"
       },
       {
-        "url": "https://zetachain-testnet.nodejumper.io:443",
+        "url": "https://rpc.nodejumper.io:443/zetachaintestnet",
         "type": "tendermint-rpc"
       },
       {
-        "url": "https://zetachain-testnet.nodejumper.io:1317",
+        "url": "https://rest.nodejumper.io/zetachaintestnet",
         "type": "cosmos-http"
-      },
-      {
-        "url": "https://zetachain-testnet.nodejumper.io:9090",
-        "type": "cosmos-grpc"
       },
       {
         "url": "https://rpc.ankr.com/zetachain_evm_athens_testnet",
@@ -274,22 +270,6 @@
       },
       {
         "url": "https://rpc.ankr.com/http/zetachain_athens_testnet",
-        "type": "cosmos-http"
-      },
-      {
-        "url": "https://zetachain-evm-athens-testnet-public.unifra.io",
-        "type": "evm"
-      },
-      {
-        "url": "https://zetachain-tendermint-rpc-athens-testnet-public.unifra.io",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://zetachain-tendermint-http-athens-testnet-public.unifra.io",
-        "type": "tendermint-http"
-      },
-      {
-        "url": "https://zetachain-cosmos-sdk-http-athens-testnet-public.unifra.io",
         "type": "cosmos-http"
       },
       {
