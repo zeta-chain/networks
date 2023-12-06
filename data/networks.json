@@ -297,7 +297,7 @@
         "type": "cosmos-http"
       },
       {
-        "url": "zetachain-grpc.f5nodes.com",
+        "url": "https://zetachain-grpc.f5nodes.com",
         "type": "cosmos-grpc"
       }
     ]
