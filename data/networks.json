@@ -56,7 +56,7 @@
     ]
   },
   "btc_testnet": {
-    "chain_id": 1,
+    "chain_id": 18332,
     "chain_name": "Bitcoin Testnet",
     "chain_aliases": [
       "tbtc",
