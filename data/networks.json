@@ -175,16 +175,59 @@
       }
     ]
   },
+  "zeta_mainnet": {
+    "chain_id": 7000,
+    "chain_name": "ZetaChain Mainnet",
+    "chain_aliases": [
+      "zetachain_mainnet",
+      "zeta_chain_mainnet",
+      "zeta_network_mainnet",
+      "zeta-chain-mainnet",
+      "zeta-network-mainnet",
+      "zeta-mainnet"
+    ],
+    "bech32_prefix": "zeta",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "azeta",
+            "exponent": 0
+          },
+          {
+            "denom": "zeta",
+            "exponent": 18
+          }
+        ],
+        "base": "azeta",
+        "symbol": "ZETA"
+      }
+    ],
+    "apps": [],
+    "fees": {
+      "assets": [
+        {
+          "denom": "azeta",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "staking": {
+      "denom": "azeta"
+    },
+    "api": []
+  },
   "zeta_testnet": {
     "chain_id": 7001,
-    "chain_name": "Zeta Testnet",
+    "chain_name": "ZetaChain Testnet",
     "chain_aliases": [
-      "zeta",
       "athens",
-      "zeta_chain",
-      "zeta_network",
-      "zeta-chain",
-      "zeta-network",
+      "zetachain_testnet",
+      "zeta_chain_testnet",
+      "zeta_network_testnet",
+      "zeta-chain-testnet",
+      "zeta-network-testnet",
       "zeta-testnet",
       "zetachain-athens-testnet"
     ],
