@@ -216,7 +216,40 @@
     "staking": {
       "denom": "azeta"
     },
-    "api": []
+    "api": [
+      {
+        "url": "https://zetachain.blockpi.network:443/lcd/v1/public",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain.blockpi.network:443/rpc/v1/public",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "https://zetachain-evm.blockpi.network:443/v1/rpc/public",
+        "type": "evm"
+      },
+      {
+        "url": "https://zetachain-mainnet-archive.allthatnode.com:8545",
+        "type": "evm"
+      },
+      {
+        "url": "wss://zetachain-mainnet-archive.allthatnode.com:8546",
+        "type": "evm-ws"
+      },
+      {
+        "url": "https://zetachain-mainnet-archive.allthatnode.com:1317",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-mainnet-archive.allthatnode.com:26657",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "wss://zetachain-mainnet-archive.allthatnode.com:26657/websocket",
+        "type": "tendermint-ws"
+      }
+    ]
   },
   "zeta_testnet": {
     "chain_id": 7001,
