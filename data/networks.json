@@ -242,6 +242,14 @@
         "type": "cosmos-http"
       },
       {
+        "url": "https://zeta.rpc.nodeshub.online:443/",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://zeta.api.nodeshub.online:443/",
+        "type": "cosmos-http"
+      },
+      {
         "url": "https://zetachain-mainnet-archive.allthatnode.com:26657",
         "type": "tendermint-http"
       },
