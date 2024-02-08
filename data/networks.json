@@ -89,6 +89,40 @@
       }
     ]
   },
+  "btc_mainnet": {
+    "chain_id": 8332,
+    "chain_name": "Bitcoin",
+    "chain_aliases": [
+      "btc",
+      "bitcoin"
+    ],
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "sat",
+            "exponent": 0
+          },
+          {
+            "denom": "btc",
+            "exponent": 8
+          }
+        ],
+        "base": "btc",
+        "symbol": "BTC"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://blockstream.info/api",
+        "type": "esplora"
+      },
+      {
+        "url": "https://api.blockcypher.com/v1/btc/main",
+        "type": "blockcypher"
+      }
+    ]
+  },
   "bsc_mainnet": {
     "chain_id": 56,
     "chain_name": "Binance Smart Chain Mainnet",
