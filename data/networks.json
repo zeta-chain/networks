@@ -295,7 +295,7 @@
   },
   "zeta_testnet": {
     "chain_id": 7001,
-    "chain_name": "Zeta Testnet",
+    "chain_name": "ZetaChain Testnet",
     "chain_aliases": [
       "zeta",
       "athens",
