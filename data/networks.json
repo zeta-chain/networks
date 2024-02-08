@@ -297,12 +297,12 @@
     "chain_id": 7001,
     "chain_name": "ZetaChain Testnet",
     "chain_aliases": [
-      "zeta",
       "athens",
-      "zeta_chain",
-      "zeta_network",
-      "zeta-chain",
-      "zeta-network",
+      "zetachain_testnet",
+      "zeta_chain_testnet",
+      "zeta_network_testnet",
+      "zeta-chain-testnet",
+      "zeta-network-testnet",
       "zeta-testnet",
       "zetachain-athens-testnet"
     ],
