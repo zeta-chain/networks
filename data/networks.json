@@ -433,6 +433,18 @@
       {
         "url": "https://grpc-t.zeta.nodestake.top:443",
         "type": "cosmos-grpc"
+      },
+      {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:26657",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:1317",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:8545",
+        "type": "evm"
       }
     ]
   },
