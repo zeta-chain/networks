@@ -314,6 +314,14 @@
       {
         "url": "wss://zetachain-mainnet-archive.allthatnode.com:26657/websocket",
         "type": "tendermint-ws"
+      },
+      {
+        "url": "https://zetachain-mainnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://zetachain-mainnet.public.blastapi.io",
+        "type": "evm-ws"
       }
     ]
   },
