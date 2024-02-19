@@ -425,22 +425,6 @@
       {
         "url": "https://zetachain-grpc.f5nodes.com",
         "type": "cosmos-grpc"
-      },
-      {
-        "url": "https://rpc-t.zeta.nodestake.top",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://api-t.zeta.nodestake.top",
-        "type": "cosmos-http"
-      },
-      {
-        "url": "https://jsonrpc-t.zeta.nodestake.top",
-        "type": "evm"
-      },
-      {
-        "url": "https://grpc-t.zeta.nodestake.top:443",
-        "type": "cosmos-grpc"
       }
     ]
   },
