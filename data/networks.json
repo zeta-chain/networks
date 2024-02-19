@@ -50,6 +50,14 @@
     ],
     "api": [
       {
+        "url": "https://polygon-testnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://polygon-testnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
+      {
         "url": "https://rpc.ankr.com/polygon_mumbai",
         "type": "evm"
       }
@@ -161,6 +169,14 @@
     },
     "api": [
       {
+        "url": "https://bsc-mainnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://bsc-mainnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
+      {
         "url": "https://rpc.ankr.com/bsc",
         "type": "evm"
       }
@@ -203,6 +219,14 @@
       ]
     },
     "api": [
+      {
+        "url": "https://eth-mainnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://eth-mainnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
       {
         "url": "https://rpc.ankr.com/eth",
         "type": "evm"
@@ -375,22 +399,6 @@
         "type": "cosmos-http"
       },
       {
-        "url": "https://rpc.ankr.com/zetachain_evm_athens_testnet",
-        "type": "evm"
-      },
-      {
-        "url": "https://rpc.ankr.com/zetachain_tendermint_athens_testnet",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://rpc.ankr.com/http/zetachain_tendermint_athens_testnet",
-        "type": "tendermint-http"
-      },
-      {
-        "url": "https://rpc.ankr.com/http/zetachain_athens_testnet",
-        "type": "cosmos-http"
-      },
-      {
         "url": "https://zetachain-testnet-rpc.itrocket.net",
         "type": "tendermint-rpc"
       },
@@ -484,6 +492,14 @@
         "type": "evm"
       },
       {
+        "url": "https://bsc-testnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://bsc-testnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
+      {
         "url": "https://data-seed-prebsc-1-s1.binance.org:8545",
         "type": "evm"
       }
@@ -534,6 +550,14 @@
       ]
     },
     "api": [
+      {
+        "url": "https://eth-goerli.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://eth-goerli.public.blastapi.io",
+        "type": "evm-ws"
+      },
       {
         "url": "https://rpc.ankr.com/eth_goerli",
         "type": "evm"
