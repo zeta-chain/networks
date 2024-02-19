@@ -399,6 +399,18 @@
         "type": "tendermint-ws"
       },
       {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:1317",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:26657",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:8545",
+        "type": "evm"
+      },
+      {
         "url": "https://rpc.nodejumper.io:443/zetachaintestnet",
         "type": "tendermint-rpc"
       },
