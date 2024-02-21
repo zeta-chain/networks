@@ -290,6 +290,18 @@
       {
         "url": "wss://zetachain-mainnet-archive.allthatnode.com:26657/websocket",
         "type": "tendermint-ws"
+      },
+      {
+        "url": "https://zetachain-rpc.lavenderfive.com/",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://zetachain-api.lavenderfive.com/",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-grpc.lavenderfive.com/",
+        "type": "cosmos-grpc"
       }
     ]
   },
