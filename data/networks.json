@@ -58,6 +58,10 @@
         "type": "evm-ws"
       },
       {
+        "url": "https://zetachain-grpc.lavenderfive.com:443",
+        "type": "cosmos-grpc"
+      },
+      {
         "url": "https://rpc.ankr.com/polygon_mumbai",
         "type": "evm"
       }
@@ -330,6 +334,10 @@
       {
         "url": "https://zetachain-api.lavenderfive.com:443",
         "type": "cosmos-http"
+      },
+      {
+        "url": "https://testnet-zetachain-grpc.lavenderfive.com:443",
+        "type": "cosmos-grpc"
       },
       {
         "url": "https://zetachain-jsonrpc.lavenderfive.com:443",
