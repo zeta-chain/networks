@@ -50,6 +50,14 @@
     ],
     "api": [
       {
+        "url": "https://polygon-testnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://polygon-testnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
+      {
         "url": "https://rpc.ankr.com/polygon_mumbai",
         "type": "evm"
       }
@@ -161,6 +169,14 @@
     },
     "api": [
       {
+        "url": "https://bsc-mainnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://bsc-mainnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
+      {
         "url": "https://rpc.ankr.com/bsc",
         "type": "evm"
       }
@@ -203,6 +219,14 @@
       ]
     },
     "api": [
+      {
+        "url": "https://eth-mainnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://eth-mainnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
       {
         "url": "https://rpc.ankr.com/eth",
         "type": "evm"
@@ -302,6 +326,14 @@
       {
         "url": "https://zetachain-grpc.lavenderfive.com/",
         "type": "cosmos-grpc"
+      },
+      {
+        "url": "https://zetachain-mainnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://zetachain-mainnet.public.blastapi.io",
+        "type": "evm-ws"
       }
     ]
   },
@@ -379,27 +411,23 @@
         "type": "tendermint-ws"
       },
       {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:1317",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:26657",
+        "type": "tendermint-http"
+      },
+      {
+        "url": "https://zetachain-testnet-archive.allthatnode.com:8545",
+        "type": "evm"
+      },
+      {
         "url": "https://rpc.nodejumper.io:443/zetachaintestnet",
         "type": "tendermint-rpc"
       },
       {
         "url": "https://rest.nodejumper.io/zetachaintestnet",
-        "type": "cosmos-http"
-      },
-      {
-        "url": "https://rpc.ankr.com/zetachain_evm_athens_testnet",
-        "type": "evm"
-      },
-      {
-        "url": "https://rpc.ankr.com/zetachain_tendermint_athens_testnet",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://rpc.ankr.com/http/zetachain_tendermint_athens_testnet",
-        "type": "tendermint-http"
-      },
-      {
-        "url": "https://rpc.ankr.com/http/zetachain_athens_testnet",
         "type": "cosmos-http"
       },
       {
@@ -428,22 +456,6 @@
       },
       {
         "url": "https://zetachain-grpc.f5nodes.com",
-        "type": "cosmos-grpc"
-      },
-      {
-        "url": "https://rpc-t.zeta.nodestake.top",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://api-t.zeta.nodestake.top",
-        "type": "cosmos-http"
-      },
-      {
-        "url": "https://jsonrpc-t.zeta.nodestake.top",
-        "type": "evm"
-      },
-      {
-        "url": "https://grpc-t.zeta.nodestake.top:443",
         "type": "cosmos-grpc"
       }
     ]
@@ -496,6 +508,14 @@
         "type": "evm"
       },
       {
+        "url": "https://bsc-testnet.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://bsc-testnet.public.blastapi.io",
+        "type": "evm-ws"
+      },
+      {
         "url": "https://data-seed-prebsc-1-s1.binance.org:8545",
         "type": "evm"
       }
@@ -546,6 +566,14 @@
       ]
     },
     "api": [
+      {
+        "url": "https://eth-goerli.public.blastapi.io",
+        "type": "evm"
+      },
+      {
+        "url": "wss://eth-goerli.public.blastapi.io",
+        "type": "evm-ws"
+      },
       {
         "url": "https://rpc.ankr.com/eth_goerli",
         "type": "evm"
