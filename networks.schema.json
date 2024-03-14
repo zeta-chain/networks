@@ -29,7 +29,8 @@
       "required": [
         "url",
         "type"
-      ]
+      ],
+      "additionalProperties": false
     }
   },
   "patternProperties": {
@@ -43,7 +44,14 @@
           "type": "string"
         },
         "bech32_prefix": {
-          "type": "string"
+          "type": "string",
+          "nullable": true
+        },
+        "chain_aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "fees": {
           "type": "object",
@@ -141,7 +149,8 @@
             "denom": {
               "type": "string"
             }
-          }
+          },
+          "nullable": true
         },
         "api": {
           "type": "array",
@@ -153,7 +162,8 @@
       "required": [
         "chain_id",
         "chain_name"
-      ]
+      ],
+      "additionalProperties": false
     }
   }
 }

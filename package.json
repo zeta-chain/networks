@@ -11,7 +11,7 @@
     "lint:fix": "npx eslint . --ext .js,.ts --fix",
     "lint": "npx eslint . --ext .js,.ts",
     "prepublishOnly": "npm run build",
-    "generate:types": "npx json-schema-to-typescript networks.schema.json > src/types.ts"
+    "generate": "npx json-schema-to-typescript networks.schema.json > src/types.ts"
   },
   "keywords": [],
   "author": "",
