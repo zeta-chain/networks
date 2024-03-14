@@ -25,6 +25,7 @@ export interface NetworksSchema {
     chain_id: number;
     chain_name: string;
     bech32_prefix?: string;
+    chain_aliases?: string[];
     fees?: {
       assets?: {
         denom: string;
@@ -56,11 +57,9 @@ export interface NetworksSchema {
       [k: string]: unknown;
     };
     api?: Api[];
-    [k: string]: unknown;
   };
 }
 export interface Api {
   url: string;
   type: ApiType;
-  [k: string]: unknown;
 }
