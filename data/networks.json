@@ -541,65 +541,6 @@
       }
     ]
   },
-  "goerli_testnet": {
-    "chain_id": 5,
-    "chain_name": "Goerli Testnet",
-    "chain_aliases": [
-      "goerli",
-      "goerli_chain",
-      "goerli_network",
-      "goerli-chain",
-      "goerli-network",
-      "goerli-testnet"
-    ],
-    "assets": [
-      {
-        "denoms": [
-          {
-            "denom": "wei",
-            "exponent": 0
-          },
-          {
-            "denom": "eth",
-            "exponent": 18
-          }
-        ],
-        "base": "eth",
-        "symbol": "gETH"
-      }
-    ],
-    "apps": [
-      {
-        "type": "explorer",
-        "url": "https://goerli.etherscan.io",
-        "tx": "/tx/${tx}",
-        "address": "/address/${address}"
-      }
-    ],
-    "fees": {
-      "assets": [
-        {
-          "denom": "eth",
-          "gas": 2100000,
-          "gas_price": 38000000000
-        }
-      ]
-    },
-    "api": [
-      {
-        "url": "https://eth-goerli.public.blastapi.io",
-        "type": "evm"
-      },
-      {
-        "url": "wss://eth-goerli.public.blastapi.io",
-        "type": "evm-ws"
-      },
-      {
-        "url": "https://rpc.ankr.com/eth_goerli",
-        "type": "evm"
-      }
-    ]
-  },
   "sepolia_testnet": {
     "chain_id": 11155111,
     "chain_name": "Sepolia Testnet",
