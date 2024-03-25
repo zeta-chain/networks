@@ -541,16 +541,16 @@
       }
     ]
   },
-  "goerli_testnet": {
-    "chain_id": 5,
-    "chain_name": "Goerli Testnet",
+  "sepolia_testnet": {
+    "chain_id": 11155111,
+    "chain_name": "Sepolia Testnet",
     "chain_aliases": [
-      "goerli",
-      "goerli_chain",
-      "goerli_network",
-      "goerli-chain",
-      "goerli-network",
-      "goerli-testnet"
+      "sepolia",
+      "sepolia_chain",
+      "sepolia_network",
+      "sepolia-chain",
+      "sepolia-network",
+      "sepolia-testnet"
     ],
     "assets": [
       {
@@ -565,13 +565,13 @@
           }
         ],
         "base": "eth",
-        "symbol": "gETH"
+        "symbol": "ETH"
       }
     ],
     "apps": [
       {
         "type": "explorer",
-        "url": "https://goerli.etherscan.io",
+        "url": "https://sepolia.etherscan.io",
         "tx": "/tx/${tx}",
         "address": "/address/${address}"
       }
@@ -587,15 +587,7 @@
     },
     "api": [
       {
-        "url": "https://eth-goerli.public.blastapi.io",
-        "type": "evm"
-      },
-      {
-        "url": "wss://eth-goerli.public.blastapi.io",
-        "type": "evm-ws"
-      },
-      {
-        "url": "https://rpc.ankr.com/eth_goerli",
+        "url": "https://rpc.ankr.com/eth_sepolia",
         "type": "evm"
       }
     ]
