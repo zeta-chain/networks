@@ -310,6 +310,22 @@
       {
         "url": "wss://zetachain-mainnet.public.blastapi.io",
         "type": "evm-ws"
+      },
+      {
+        "url": "https://zetachain-rpc.lavenderfive.com:443",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://zetachain-api.lavenderfive.com:443",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain-grpc.lavenderfive.com:443",
+        "type": "cosmos-grpc"
+      },
+      {
+        "url": "https://zetachain-jsonrpc.lavenderfive.com:443",
+        "type": "evm"
       }
     ]
   },
@@ -433,22 +449,6 @@
       {
         "url": "https://zetachain-grpc.f5nodes.com",
         "type": "cosmos-grpc"
-      },
-      {
-        "url": "https://testnet-zetachain-rpc.lavenderfive.com:443",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://testnet-zetachain-api.lavenderfive.com:443",
-        "type": "cosmos-http"
-      },
-      {
-        "url": "https://zetachain-grpc.lavenderfive.com:443",
-        "type": "cosmos-grpc"
-      },
-      {
-        "url": "https://testnet-zetachain-jsonrpc.lavenderfive.com:443",
-        "type": "evm"
       }
     ]
   },
