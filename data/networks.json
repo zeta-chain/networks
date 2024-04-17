@@ -56,10 +56,6 @@
       {
         "url": "wss://polygon-testnet.public.blastapi.io",
         "type": "evm-ws"
-      },
-      {
-        "url": "https://rpc.ankr.com/polygon_mumbai",
-        "type": "evm"
       }
     ]
   },
@@ -300,14 +296,6 @@
         "type": "cosmos-http"
       },
       {
-        "url": "https://zeta.rpc.nodeshub.online:443/",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://zeta.api.nodeshub.online:443/",
-        "type": "cosmos-http"
-      },
-      {
         "url": "https://zetachain-mainnet-archive.allthatnode.com:26657",
         "type": "tendermint-http"
       },
@@ -461,22 +449,6 @@
       {
         "url": "https://zetachain-grpc.f5nodes.com",
         "type": "cosmos-grpc"
-      },
-      {
-        "url": "https://testnet-zetachain-rpc.lavenderfive.com:443",
-        "type": "tendermint-rpc"
-      },
-      {
-        "url": "https://testnet-zetachain-api.lavenderfive.com:443",
-        "type": "cosmos-http"
-      },
-      {
-        "url": "https://zetachain-grpc.lavenderfive.com:443",
-        "type": "cosmos-grpc"
-      },
-      {
-        "url": "https://testnet-zetachain-jsonrpc.lavenderfive.com:443",
-        "type": "evm"
       }
     ]
   },
