@@ -292,6 +292,14 @@
         "type": "evm-ws"
       },
       {
+        "url": "https://zetachain.api.nodeshub.online:443",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "https://zetachain.rpc.nodeshub.online:443",
+        "type": "tendermint-rpc"
+      },
+      {
         "url": "https://zetachain-mainnet-archive.allthatnode.com:1317",
         "type": "cosmos-http"
       },
