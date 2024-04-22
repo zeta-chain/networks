@@ -559,7 +559,7 @@
     },
     "api": [
       {
-        "url": "https://rpc.ankr.com/eth_sepolia",
+        "url": "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
         "type": "evm"
       }
     ]
