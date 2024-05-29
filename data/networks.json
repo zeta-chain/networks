@@ -571,5 +571,121 @@
         "type": "evm"
       }
     ]
+  },
+  "zeta_developnet": {
+    "chain_id": 101,
+    "chain_name": "ZetaChain developnet",
+    "chain_aliases": [
+      "developnet",
+      "zetachain_developnet",
+      "zeta_chain_developnet",
+      "zeta_network_developnet",
+      "zeta-chain-developnet",
+      "zeta-network-developnet",
+      "zeta-developnet"
+    ],
+    "bech32_prefix": "zeta",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "azeta",
+            "exponent": 0
+          },
+          {
+            "denom": "zeta",
+            "exponent": 18
+          }
+        ],
+        "base": "azeta",
+        "symbol": "ZETA"
+      }
+    ],
+    "apps": [],
+    "fees": {
+      "assets": [
+        {
+          "denom": "azeta",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "staking": {
+      "denom": "azeta"
+    },
+    "api": [
+      {
+        "url": "https://develop-zevm-0.zetachain.network",
+        "type": "evm"
+      },
+      {
+        "url": "https://develop-cometbft-0.zetachain.network",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://develop-cosmos-api-0.zetachain.network",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "wss://develop-cometbft-0.zetachain.network/websocket",
+        "type": "tendermint-ws"
+      },
+      {
+        "url": "https://develop-zevm-1.zetachain.network",
+        "type": "evm"
+      },
+      {
+        "url": "https://develop-cometbft-1.zetachain.network",
+        "type": "tendermint-rpc"
+      },
+      {
+        "url": "https://develop-cosmos-api-1.zetachain.network",
+        "type": "cosmos-http"
+      },
+      {
+        "url": "wss://develop-cometbft-1.zetachain.network/websocket",
+        "type": "tendermint-ws"
+      }
+    ]
+  },
+  "eth_developnet": {
+    "chain_id": 1337,
+    "chain_name": "ETH developnet",
+    "chain_aliases": [
+      "eth-developnet"
+    ],
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "eth",
+            "exponent": 18
+          }
+        ],
+        "base": "eth",
+        "symbol": "ETH"
+      }
+    ],
+    "apps": [],
+    "fees": {
+      "assets": [
+        {
+          "denom": "eth",
+          "gas": 2100000,
+          "gas_price": 38000000000
+        }
+      ]
+    },
+    "api": [
+      {
+        "url": "https://develop-eth.zetachain.network",
+        "type": "evm"
+      }
+    ]
   }
 }
