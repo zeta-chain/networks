@@ -407,15 +407,15 @@
         "type": "tendermint-ws"
       },
       {
-        "url": "https://zetachain-testnet-archive.allthatnode.com:1317",
+        "url": "https://zetachain-athens.g.allthatnode.com/archive/rest",
         "type": "cosmos-http"
       },
       {
-        "url": "https://zetachain-testnet-archive.allthatnode.com:26657",
+        "url": "https://zetachain-athens.g.allthatnode.com/archive/tendermint",
         "type": "tendermint-http"
       },
       {
-        "url": "https://zetachain-testnet-archive.allthatnode.com:8545",
+        "url": "https://zetachain-athens.g.allthatnode.com/archive/evm",
         "type": "evm"
       },
       {
