@@ -1,20 +1,20 @@
 {
-  "mumbai_testnet": {
-    "chain_id": 80001,
+  "amoy_testnet": {
+    "chain_id": 80002,
     "chain_aliases": [
-      "mumbai",
-      "polygon_mumbai",
+      "amoy",
+      "polygon_amoy",
       "polygon_testnet",
-      "mumbai_chain",
-      "mumbai_network",
-      "polygon-mumbai",
+      "amoy_chain",
+      "amoy_network",
+      "polygon-amoy",
       "polygon-testnet",
-      "mumbai-chain",
-      "mumbai-network",
-      "mumbai-testnet",
+      "amoy-chain",
+      "amoy-network",
+      "amoy-testnet",
       "maticmum"
     ],
-    "chain_name": "Mumbai Testnet",
+    "chain_name": "Amoy Testnet",
     "fees": {
       "assets": [
         {
@@ -43,19 +43,19 @@
     "apps": [
       {
         "type": "explorer",
-        "url": "https://mumbai.polygonscan.com",
+        "url": "https://amoy.polygonscan.com",
         "tx": "/tx/${tx}",
         "address": "/address/${address}"
       }
     ],
     "api": [
       {
-        "url": "https://polygon-testnet.public.blastapi.io",
+        "url": "https://polygon-amoy.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
       {
-        "url": "wss://polygon-testnet.public.blastapi.io",
-        "type": "evm-ws"
+        "url": "https://rpc.ankr.com/polygon_amoy",
+        "type": "evm"
       }
     ]
   },
