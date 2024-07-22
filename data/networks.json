@@ -1,4 +1,56 @@
 {
+  "polygon_mainnet": {
+    "chain_id": 137,
+    "chain_aliases": [
+      "polygon",
+      "polygon-network",
+      "polygon-chain"
+    ],
+    "chain_name": "Polygon PoS Mainnet",
+    "fees": {
+      "assets": [
+        {
+          "denom": "pol",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "pol",
+            "exponent": 18
+          }
+        ],
+        "base": "pol",
+        "symbol": "POL"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://polygonscan.com",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://polygon.blockpi.network/v1/rpc/public",
+        "type": "evm"
+      },
+      {
+        "url": "https://rpc.ankr.com/polygon",
+        "type": "evm"
+      }
+    ]
+  },
   "amoy_testnet": {
     "chain_id": 80002,
     "chain_aliases": [
