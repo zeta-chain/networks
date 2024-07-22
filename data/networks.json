@@ -86,6 +86,14 @@
         "symbol": "ETH"
       }
     ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://sepolia.basescan.org/",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
     "api": [
       {
         "url": "https://base-sepolia.blockpi.network/v1/rpc/public",
