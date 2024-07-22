@@ -1,4 +1,173 @@
 {
+  "base_mainnet": {
+    "chain_id": 8453,
+    "chain_aliases": [
+      "base",
+      "base_network",
+      "base_chain",
+      "base-network",
+      "base-chain",
+      "base-mainnet"
+    ],
+    "chain_name": "Base Mainnet",
+    "fees": {
+      "assets": [
+        {
+          "denom": "eth",
+          "gas": 5000000,
+          "gas_price": 1000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "eth",
+            "exponent": 18
+          }
+        ],
+        "base": "eth",
+        "symbol": "ETH"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://basescan.org/",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://base.blockpi.network/v1/rpc/public",
+        "type": "evm"
+      },
+      {
+        "url": "https://rpc.ankr.com/base",
+        "type": "evm"
+      }
+    ]
+  },
+  "base_testnet": {
+    "chain_id": 84532,
+    "chain_aliases": [
+      "base",
+      "base_network",
+      "base_chain",
+      "base_sepolia_testnet",
+      "base_sepolia",
+      "base-network",
+      "base-chain",
+      "base-testnet",
+      "base-sepolia-testnet",
+      "base-sepolia"
+    ],
+    "chain_name": "Base Sepolia Testnet",
+    "fees": {
+      "assets": [
+        {
+          "denom": "eth",
+          "gas": 5000000,
+          "gas_price": 1000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "eth",
+            "exponent": 18
+          }
+        ],
+        "base": "eth",
+        "symbol": "ETH"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://sepolia.basescan.org/",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://base-sepolia.blockpi.network/v1/rpc/public",
+        "type": "evm"
+      },
+      {
+        "url": "https://rpc.ankr.com/base_sepolia",
+        "type": "evm"
+      }
+    ]
+  },
+  "polygon_mainnet": {
+    "chain_id": 137,
+    "chain_aliases": [
+      "polygon",
+      "polygon_network",
+      "polygon_chain",
+      "polygon-mainnet",
+      "polygon-network",
+      "polygon-chain"
+    ],
+    "chain_name": "Polygon PoS Mainnet",
+    "fees": {
+      "assets": [
+        {
+          "denom": "pol",
+          "gas": 5000000,
+          "gas_price": 80000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "pol",
+            "exponent": 18
+          }
+        ],
+        "base": "pol",
+        "symbol": "POL"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://polygonscan.com",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://polygon.blockpi.network/v1/rpc/public",
+        "type": "evm"
+      },
+      {
+        "url": "https://rpc.ankr.com/polygon",
+        "type": "evm"
+      }
+    ]
+  },
   "amoy_testnet": {
     "chain_id": 80002,
     "chain_aliases": [
