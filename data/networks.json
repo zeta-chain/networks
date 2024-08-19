@@ -54,7 +54,7 @@
       }
     ]
   },
-  "base_testnet": {
+  "base_sepolia": {
     "chain_id": 84532,
     "chain_aliases": [
       "base",
