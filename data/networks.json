@@ -54,7 +54,7 @@
       }
     ]
   },
-  "base_testnet": {
+  "base_sepolia": {
     "chain_id": 84532,
     "chain_aliases": [
       "base",
@@ -734,6 +734,46 @@
       {
         "url": "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
         "type": "evm"
+      }
+    ]
+  },
+  "solana_devnet": {
+    "chain_id": "901",
+    "chain_aliases": [
+      "solana_testnet",
+      "solana_devnet",
+      "solana-testnet",
+      "solana-devnet"
+    ],
+    "chain_name": "Solana Devnet",
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "lamport",
+            "exponent": 0
+          },
+          {
+            "denom": "sol",
+            "exponent": 9
+          }
+        ],
+        "base": "sol",
+        "symbol": "SOL"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://explorer.solana.com",
+        "tx": "/tx/${tx}?cluster=devnet",
+        "address": "/address/${address}?cluster=devnet"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://api.devnet.solana.com",
+        "type": "solana"
       }
     ]
   }
