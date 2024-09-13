@@ -738,7 +738,7 @@
     ]
   },
   "solana_devnet": {
-    "chain_id": 901,
+    "chain_id": "901",
     "chain_aliases": [
       "solana_testnet",
       "solana_devnet",
