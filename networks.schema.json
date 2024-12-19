@@ -13,7 +13,8 @@
         "cosmos-grpc",
         "evm-ws",
         "blockcypher",
-        "esplora"
+        "esplora",
+        "solana"
       ]
     },
     "api": {

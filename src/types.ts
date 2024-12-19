@@ -14,7 +14,8 @@ export type ApiType =
   | "cosmos-grpc"
   | "evm-ws"
   | "blockcypher"
-  | "esplora";
+  | "esplora"
+  | "solana";
 
 export interface NetworksSchema {
   /**
