@@ -45,6 +45,10 @@
     ],
     "api": [
       {
+        "url": "https://base.drpc.org",
+        "type": "evm"
+      },
+      {
         "url": "https://base.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
@@ -104,6 +108,10 @@
     ],
     "api": [
       {
+        "url": "https://base-sepolia.drpc.org",
+        "type": "evm"
+      },
+      {
         "url": "https://base-sepolia.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
@@ -158,6 +166,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://polygon.drpc.org",
+        "type": "evm"
+      },
       {
         "url": "https://polygon.blockpi.network/v1/rpc/public",
         "type": "evm"
@@ -218,6 +230,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://polygon-amoy.drpc.org",
+        "type": "evm"
+      },
       {
         "url": "https://polygon-amoy.blockpi.network/v1/rpc/public",
         "type": "evm"
@@ -334,6 +350,10 @@
     },
     "api": [
       {
+        "url": "https://bsc.drpc.org",
+        "type": "evm"
+      },
+      {
         "url": "https://bsc-mainnet.public.blastapi.io",
         "type": "evm"
       },
@@ -384,6 +404,10 @@
       ]
     },
     "api": [
+      {
+        "url": "https://eth.drpc.org",
+        "type": "evm"
+      },
       {
         "url": "https://eth-mainnet.public.blastapi.io",
         "type": "evm"
@@ -440,6 +464,10 @@
       "denom": "azeta"
     },
     "api": [
+      {
+        "url": "https://zeta-chain.drpc.org",
+        "type": "evm"
+      },
       {
         "url": "https://zetachain.blockpi.network:443/lcd/v1/public",
         "type": "cosmos-http"
@@ -572,6 +600,10 @@
     },
     "api": [
       {
+        "url": "https://zeta-chain-testnet.drpc.org",
+        "type": "evm"
+      },
+      {
         "url": "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
@@ -669,6 +701,10 @@
     },
     "api": [
       {
+        "url": "https://bsc-testnet.drpc.org",
+        "type": "evm"
+      },
+      {
         "url": "https://bsc-testnet.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
@@ -732,6 +768,10 @@
     },
     "api": [
       {
+        "url": "https://sepolia.drpc.org",
+        "type": "evm"
+      },
+      {
         "url": "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
         "type": "evm"
       }
@@ -771,6 +811,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://solana-devnet.drpc.org",
+        "type": "solana"
+      },
       {
         "url": "https://api.devnet.solana.com",
         "type": "solana"
