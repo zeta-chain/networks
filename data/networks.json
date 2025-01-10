@@ -812,10 +812,6 @@
     ],
     "api": [
       {
-        "url": "https://solana-devnet.drpc.org",
-        "type": "solana"
-      },
-      {
         "url": "https://api.devnet.solana.com",
         "type": "solana"
       }
