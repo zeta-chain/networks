@@ -45,6 +45,10 @@
     ],
     "api": [
       {
+        "url": "https://base-rpc.publicnode.com",
+        "type": "evm"
+      },
+      {
         "url": "https://base.drpc.org",
         "type": "evm"
       },
@@ -108,6 +112,10 @@
     ],
     "api": [
       {
+        "url": "https://base-sepolia-rpc.publicnode.com",
+        "type": "evm"
+      },
+      {
         "url": "https://base-sepolia.drpc.org",
         "type": "evm"
       },
@@ -166,6 +174,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://polygon-bor-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://polygon.drpc.org",
         "type": "evm"
@@ -230,6 +242,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://polygon-amoy-bor-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://polygon-amoy.drpc.org",
         "type": "evm"
@@ -350,6 +366,10 @@
     },
     "api": [
       {
+        "url": "https://bsc-rpc.publicnode.com",
+        "type": "evm"
+      },
+      {
         "url": "https://bsc.drpc.org",
         "type": "evm"
       },
@@ -404,6 +424,10 @@
       ]
     },
     "api": [
+      {
+        "url": "https://ethereum-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://eth.drpc.org",
         "type": "evm"
@@ -465,6 +489,10 @@
     },
     "api": [
       {
+        "url": "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
+        "type": "evm"
+      },
+      {
         "url": "https://zeta-chain.drpc.org",
         "type": "evm"
       },
@@ -478,10 +506,6 @@
       },
       {
         "url": "https://zetachain-evm.blockpi.network:443/v1/rpc/public",
-        "type": "evm"
-      },
-      {
-        "url": "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
         "type": "evm"
       },
       {
@@ -600,6 +624,10 @@
     },
     "api": [
       {
+        "url": "https://zetachain-athens.g.allthatnode.com/archive/evm",
+        "type": "evm"
+      },
+      {
         "url": "https://zeta-chain-testnet.drpc.org",
         "type": "evm"
       },
@@ -626,10 +654,6 @@
       {
         "url": "https://zetachain-athens.g.allthatnode.com/archive/tendermint",
         "type": "tendermint-http"
-      },
-      {
-        "url": "https://zetachain-athens.g.allthatnode.com/archive/evm",
-        "type": "evm"
       },
       {
         "url": "https://rpc.nodejumper.io:443/zetachaintestnet",
@@ -701,6 +725,10 @@
     },
     "api": [
       {
+        "url": "https://bsc-testnet-rpc.publicnode.com",
+        "type": "evm"
+      },
+      {
         "url": "https://bsc-testnet.drpc.org",
         "type": "evm"
       },
@@ -767,6 +795,10 @@
       ]
     },
     "api": [
+      {
+        "url": "https://ethereum-sepolia-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://sepolia.drpc.org",
         "type": "evm"
