@@ -14,7 +14,7 @@
       "assets": [
         {
           "denom": "eth",
-          "gas": 5000000,
+          "gas": 1000000,
           "gas_price": 1000000000
         }
       ]
@@ -44,6 +44,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://base-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://base.drpc.org",
         "type": "evm"
@@ -77,7 +81,7 @@
       "assets": [
         {
           "denom": "eth",
-          "gas": 5000000,
+          "gas": 1000000,
           "gas_price": 1000000000
         }
       ]
@@ -108,6 +112,10 @@
     ],
     "api": [
       {
+        "url": "https://base-sepolia-rpc.publicnode.com",
+        "type": "evm"
+      },
+      {
         "url": "https://base-sepolia.drpc.org",
         "type": "evm"
       },
@@ -136,7 +144,7 @@
       "assets": [
         {
           "denom": "pol",
-          "gas": 5000000,
+          "gas": 1000000,
           "gas_price": 80000000000
         }
       ]
@@ -166,6 +174,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://polygon-bor-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://polygon.drpc.org",
         "type": "evm"
@@ -200,7 +212,7 @@
       "assets": [
         {
           "denom": "tmatic",
-          "gas": 5000000,
+          "gas": 1000000,
           "gas_price": 80000000000
         }
       ]
@@ -230,6 +242,10 @@
       }
     ],
     "api": [
+      {
+        "url": "https://polygon-amoy-bor-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://polygon-amoy.drpc.org",
         "type": "evm"
@@ -343,12 +359,16 @@
       "assets": [
         {
           "denom": "bnb",
-          "gas": 2100000,
+          "gas": 1000000,
           "gas_price": 5000000000
         }
       ]
     },
     "api": [
+      {
+        "url": "https://bsc-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://bsc.drpc.org",
         "type": "evm"
@@ -398,12 +418,16 @@
       "assets": [
         {
           "denom": "eth",
-          "gas": 2100000,
+          "gas": 1000000,
           "gas_price": 38000000000
         }
       ]
     },
     "api": [
+      {
+        "url": "https://ethereum-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://eth.drpc.org",
         "type": "evm"
@@ -455,7 +479,7 @@
       "assets": [
         {
           "denom": "azeta",
-          "gas": 5000000,
+          "gas": 1000000,
           "gas_price": 10000000000
         }
       ]
@@ -464,6 +488,10 @@
       "denom": "azeta"
     },
     "api": [
+      {
+        "url": "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
+        "type": "evm"
+      },
       {
         "url": "https://zeta-chain.drpc.org",
         "type": "evm"
@@ -478,10 +506,6 @@
       },
       {
         "url": "https://zetachain-evm.blockpi.network:443/v1/rpc/public",
-        "type": "evm"
-      },
-      {
-        "url": "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
         "type": "evm"
       },
       {
@@ -590,7 +614,7 @@
       "assets": [
         {
           "denom": "azeta",
-          "gas": 5000000,
+          "gas": 1000000,
           "gas_price": 80000000000
         }
       ]
@@ -599,6 +623,10 @@
       "denom": "azeta"
     },
     "api": [
+      {
+        "url": "https://zetachain-athens.g.allthatnode.com/archive/evm",
+        "type": "evm"
+      },
       {
         "url": "https://zeta-chain-testnet.drpc.org",
         "type": "evm"
@@ -626,10 +654,6 @@
       {
         "url": "https://zetachain-athens.g.allthatnode.com/archive/tendermint",
         "type": "tendermint-http"
-      },
-      {
-        "url": "https://zetachain-athens.g.allthatnode.com/archive/evm",
-        "type": "evm"
       },
       {
         "url": "https://rpc.nodejumper.io:443/zetachaintestnet",
@@ -694,12 +718,16 @@
       "assets": [
         {
           "denom": "bnb",
-          "gas": 5000000,
+          "gas": 1000000,
           "gas_price": 80000000000
         }
       ]
     },
     "api": [
+      {
+        "url": "https://bsc-testnet-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://bsc-testnet.drpc.org",
         "type": "evm"
@@ -761,12 +789,16 @@
       "assets": [
         {
           "denom": "eth",
-          "gas": 2100000,
+          "gas": 1000000,
           "gas_price": 38000000000
         }
       ]
     },
     "api": [
+      {
+        "url": "https://ethereum-sepolia-rpc.publicnode.com",
+        "type": "evm"
+      },
       {
         "url": "https://sepolia.drpc.org",
         "type": "evm"
