@@ -13,7 +13,7 @@
       "avalanche-c-fuji-testnet",
       "avalanche-c-fuji"
     ],
-    "chain_name": "Avalanche C-Chain Fuji",
+    "chain_name": "Avalanche C-Chain Fuji Testnet",
     "fees": {
       "assets": [
         {
