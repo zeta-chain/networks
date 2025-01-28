@@ -2,14 +2,10 @@
   "avalanche_testnet": {
     "chain_id": 43113,
     "chain_aliases": [
-      "avalanche_c",
-      "avalanche_c_network",
-      "avalanche_c_chain",
+      "avalanche_c_fuji_chain",
       "avalanche_c_fuji_testnet",
       "avalanche_c_fuji",
-      "avalanche-c",
-      "avalanche-c-network",
-      "avalanche-c-chain",
+      "avalanche-c-fuji-chain",
       "avalanche-c-fuji-testnet",
       "avalanche-c-fuji"
     ],
@@ -69,13 +65,8 @@
   "arbitrum_sepolia": {
     "chain_id": 421614,
     "chain_aliases": [
-      "arbitrum",
-      "arbitrum_network",
-      "arbitrum_chain",
       "arbitrum_sepolia_testnet",
       "arbitrum_sepolia",
-      "arbitrum-network",
-      "arbitrum-chain",
       "arbitrum-testnet",
       "arbitrum-sepolia-testnet",
       "arbitrum-sepolia"
@@ -191,13 +182,8 @@
   "base_sepolia": {
     "chain_id": 84532,
     "chain_aliases": [
-      "base",
-      "base_network",
-      "base_chain",
       "base_sepolia_testnet",
       "base_sepolia",
-      "base-network",
-      "base-chain",
       "base-testnet",
       "base-sepolia-testnet",
       "base-sepolia"
@@ -791,10 +777,12 @@
     "chain_id": 97,
     "chain_name": "Binance Smart Chain Testnet",
     "chain_aliases": [
-      "bsc",
       "bsc-testnet",
-      "bsc-chain",
-      "bsc-network"
+      "bsc-testnet-chain",
+      "bsc-testnet-network",
+      "bsc_testnet",
+      "bsc_testnet_chain",
+      "bsc_testnet_network"
     ],
     "assets": [
       {
