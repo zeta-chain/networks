@@ -1,4 +1,134 @@
 {
+  "avalanche_testnet": {
+    "chain_id": 43113,
+    "chain_aliases": [
+      "avalanche_c",
+      "avalanche_c_network",
+      "avalanche_c_chain",
+      "avalanche_c_fuji_testnet",
+      "avalanche_c_fuji",
+      "avalanche-c",
+      "avalanche-c-network",
+      "avalanche-c-chain",
+      "avalanche-c-fuji-testnet",
+      "avalanche-c-fuji"
+    ],
+    "chain_name": "Avalanche C-Chain Fuji",
+    "fees": {
+      "assets": [
+        {
+          "denom": "avax",
+          "gas": 5000000,
+          "gas_price": 1000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "avax",
+            "exponent": 18
+          }
+        ],
+        "base": "avax",
+        "symbol": "AVAX"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://subnets-test.avax.network/c-chain",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://api.avax-test.network/ext/bc/C/rpc",
+        "type": "evm"
+      },
+      {
+        "url": "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc",
+        "type": "evm"
+      },
+      {
+        "url": "https://rpc.ankr.com/avalanche_fuji",
+        "type": "evm"
+      },
+      {
+        "url": "https://avalanche-fuji-c-chain-rpc.publicnode.com",
+        "type": "evm"
+      }
+    ]
+  },
+  "arbitrum_sepolia": {
+    "chain_id": 421614,
+    "chain_aliases": [
+      "arbitrum",
+      "arbitrum_network",
+      "arbitrum_chain",
+      "arbitrum_sepolia_testnet",
+      "arbitrum_sepolia",
+      "arbitrum-network",
+      "arbitrum-chain",
+      "arbitrum-testnet",
+      "arbitrum-sepolia-testnet",
+      "arbitrum-sepolia"
+    ],
+    "chain_name": "Arbitrum Sepolia Testnet",
+    "fees": {
+      "assets": [
+        {
+          "denom": "eth",
+          "gas": 5000000,
+          "gas_price": 1000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "wei",
+            "exponent": 0
+          },
+          {
+            "denom": "eth",
+            "exponent": 18
+          }
+        ],
+        "base": "eth",
+        "symbol": "ETH"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://sepolia.arbiscan.io/",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://sepolia-rollup.arbitrum.io/rpc",
+        "type": "evm"
+      },
+      {
+        "url": "https://arbitrum-sepolia-rpc.publicnode.com",
+        "type": "evm"
+      },
+      {
+        "url": "https://arbitrum-sepolia.gateway.tenderly.co",
+        "type": "evm"
+      }
+    ]
+  },
   "base_mainnet": {
     "chain_id": 8453,
     "chain_aliases": [
