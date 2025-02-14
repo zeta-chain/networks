@@ -171,6 +171,10 @@
     ],
     "api": [
       {
+        "url": "https://arbitrum-one-rpc.publicnode.com",
+        "type": "evm"
+      },
+      {
         "url": "https://arbitrum.drpc.org",
         "type": "evm"
       },
