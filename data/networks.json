@@ -1,5 +1,6 @@
 {
   "avalanche_mainnet": {
+    "type": "mainnet",
     "chain_id": 43114,
     "chain_aliases": [
       "avalanche_c_chain",
@@ -63,6 +64,7 @@
     ]
   },
   "avalanche_testnet": {
+    "type": "testnet",
     "chain_id": 43113,
     "chain_aliases": [
       "avalanche_c_fuji_chain",
@@ -126,6 +128,7 @@
     ]
   },
   "arbitrum_mainnet": {
+    "type": "mainnet",
     "chain_id": 42161,
     "chain_aliases": [
       "arbitrum",
@@ -189,6 +192,7 @@
     ]
   },
   "arbitrum_sepolia": {
+    "type": "testnet",
     "chain_id": 421614,
     "chain_aliases": [
       "arbitrum_sepolia_testnet",
@@ -247,6 +251,7 @@
     ]
   },
   "base_mainnet": {
+    "type": "mainnet",
     "chain_id": 8453,
     "chain_aliases": [
       "base",
@@ -310,6 +315,7 @@
     ]
   },
   "base_sepolia": {
+    "type": "testnet",
     "chain_id": 84532,
     "chain_aliases": [
       "base_sepolia_testnet",
@@ -372,6 +378,7 @@
     ]
   },
   "polygon_mainnet": {
+    "type": "mainnet",
     "chain_id": 137,
     "chain_aliases": [
       "polygon",
@@ -435,6 +442,7 @@
     ]
   },
   "amoy_testnet": {
+    "type": "testnet",
     "chain_id": 80002,
     "chain_aliases": [
       "amoy",
@@ -503,6 +511,7 @@
     ]
   },
   "btc_testnet": {
+    "type": "testnet",
     "chain_id": 18332,
     "chain_name": "Bitcoin Testnet",
     "chain_aliases": [
@@ -537,6 +546,7 @@
     ]
   },
   "btc_mainnet": {
+    "type": "mainnet",
     "chain_id": 8332,
     "chain_name": "Bitcoin",
     "chain_aliases": [
@@ -571,6 +581,7 @@
     ]
   },
   "bsc_mainnet": {
+    "type": "mainnet",
     "chain_id": 56,
     "chain_name": "Binance Smart Chain Mainnet",
     "assets": [
@@ -630,6 +641,7 @@
     ]
   },
   "eth_mainnet": {
+    "type": "mainnet",
     "chain_id": 1,
     "chain_name": "Ethereum Mainnet",
     "assets": [
@@ -689,6 +701,7 @@
     ]
   },
   "zeta_mainnet": {
+    "type": "mainnet",
     "chain_id": 7000,
     "chain_name": "ZetaChain Mainnet",
     "chain_aliases": [
@@ -809,6 +822,7 @@
     ]
   },
   "zeta_testnet": {
+    "type": "testnet",
     "chain_id": 7001,
     "chain_name": "ZetaChain Testnet",
     "chain_aliases": [
@@ -924,6 +938,7 @@
     ]
   },
   "bsc_testnet": {
+    "type": "testnet",
     "chain_id": 97,
     "chain_name": "Binance Smart Chain Testnet",
     "chain_aliases": [
@@ -995,6 +1010,7 @@
     ]
   },
   "sepolia_testnet": {
+    "type": "testnet",
     "chain_id": 11155111,
     "chain_name": "Sepolia Testnet",
     "chain_aliases": [
@@ -1054,6 +1070,7 @@
     ]
   },
   "solana_devnet": {
+    "type": "testnet",
     "chain_id": 901,
     "chain_aliases": [
       "solana_testnet",
