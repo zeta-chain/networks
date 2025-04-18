@@ -23,6 +23,7 @@ export interface NetworksSchema {
    * via the `patternProperty` "^.*$".
    */
   [k: string]: {
+    type: "mainnet" | "testnet";
     chain_id: number;
     chain_name: string;
     bech32_prefix?: string;

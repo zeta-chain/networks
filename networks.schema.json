@@ -38,6 +38,13 @@
     "^.*$": {
       "type": "object",
       "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "mainnet",
+            "testnet"
+          ]
+        },
         "chain_id": {
           "type": "integer"
         },
@@ -161,6 +168,7 @@
         }
       },
       "required": [
+        "type",
         "chain_id",
         "chain_name"
       ],
