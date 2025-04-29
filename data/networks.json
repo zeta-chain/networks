@@ -49,10 +49,7 @@
         "url": "https://api.avax.network/ext/bc/C/rpc",
         "type": "evm"
       },
-      {
-        "url": "https://ava-mainnet.public.blastapi.io/ext/bc/C/rpc",
-        "type": "evm"
-      },
+
       {
         "url": "https://rpc.ankr.com/avalanche",
         "type": "evm"
@@ -113,10 +110,7 @@
         "url": "https://api.avax-test.network/ext/bc/C/rpc",
         "type": "evm"
       },
-      {
-        "url": "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc",
-        "type": "evm"
-      },
+
       {
         "url": "https://rpc.ankr.com/avalanche_fuji",
         "type": "evm"
@@ -626,14 +620,7 @@
         "url": "https://bsc.drpc.org",
         "type": "evm"
       },
-      {
-        "url": "https://bsc-mainnet.public.blastapi.io",
-        "type": "evm"
-      },
-      {
-        "url": "wss://bsc-mainnet.public.blastapi.io",
-        "type": "evm-ws"
-      },
+
       {
         "url": "https://rpc.ankr.com/bsc",
         "type": "evm"
@@ -686,14 +673,7 @@
         "url": "https://eth.drpc.org",
         "type": "evm"
       },
-      {
-        "url": "https://eth-mainnet.public.blastapi.io",
-        "type": "evm"
-      },
-      {
-        "url": "wss://eth-mainnet.public.blastapi.io",
-        "type": "evm-ws"
-      },
+
       {
         "url": "https://rpc.ankr.com/eth",
         "type": "evm"
@@ -783,14 +763,7 @@
         "url": "https://zetachain-mainnet.g.allthatnode.com/archive/tendermint",
         "type": "tendermint-http"
       },
-      {
-        "url": "https://zetachain-mainnet.public.blastapi.io",
-        "type": "evm"
-      },
-      {
-        "url": "wss://zetachain-mainnet.public.blastapi.io",
-        "type": "evm-ws"
-      },
+
       {
         "url": "https://zetachain-rpc.lavenderfive.com:443",
         "type": "tendermint-rpc"
@@ -995,14 +968,7 @@
         "url": "https://bsc-testnet.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
-      {
-        "url": "https://bsc-testnet.public.blastapi.io",
-        "type": "evm"
-      },
-      {
-        "url": "wss://bsc-testnet.public.blastapi.io",
-        "type": "evm-ws"
-      },
+
       {
         "url": "https://data-seed-prebsc-1-s1.binance.org:8545",
         "type": "evm"
