@@ -49,7 +49,6 @@
         "url": "https://api.avax.network/ext/bc/C/rpc",
         "type": "evm"
       },
-
       {
         "url": "https://rpc.ankr.com/avalanche",
         "type": "evm"
@@ -110,7 +109,6 @@
         "url": "https://api.avax-test.network/ext/bc/C/rpc",
         "type": "evm"
       },
-
       {
         "url": "https://rpc.ankr.com/avalanche_fuji",
         "type": "evm"
@@ -487,7 +485,7 @@
     ],
     "api": [
       {
-        "url": "https://polygon-amoy-bor-rpc.publicnode.com",
+        "url": "https://polygon-amoy.api.onfinality.io/public",
         "type": "evm"
       },
       {
@@ -620,7 +618,6 @@
         "url": "https://bsc.drpc.org",
         "type": "evm"
       },
-
       {
         "url": "https://rpc.ankr.com/bsc",
         "type": "evm"
@@ -673,7 +670,6 @@
         "url": "https://eth.drpc.org",
         "type": "evm"
       },
-
       {
         "url": "https://rpc.ankr.com/eth",
         "type": "evm"
@@ -763,7 +759,6 @@
         "url": "https://zetachain-mainnet.g.allthatnode.com/archive/tendermint",
         "type": "tendermint-http"
       },
-
       {
         "url": "https://zetachain-rpc.lavenderfive.com:443",
         "type": "tendermint-rpc"
@@ -968,7 +963,6 @@
         "url": "https://bsc-testnet.blockpi.network/v1/rpc/public",
         "type": "evm"
       },
-
       {
         "url": "https://data-seed-prebsc-1-s1.binance.org:8545",
         "type": "evm"
