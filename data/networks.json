@@ -1069,5 +1069,69 @@
         "type": "solana"
       }
     ]
+  },
+  "kaia_testnet": {
+    "type": "testnet",
+    "chain_id": 1001,
+    "chain_aliases": [
+      "kaia_kairos_chain",
+      "kaia_kairos_testnet",
+      "kaia_kairos",
+      "kaia-kairos-chain",
+      "kaia-kairos-testnet",
+      "kaia-kairos"
+    ],
+    "chain_name": "Kaia Kairos Testnet",
+    "fees": {
+      "assets": [
+        {
+          "denom": "kaia",
+          "gas": 5000000,
+          "gas_price": 1000000000
+        }
+      ]
+    },
+    "assets": [
+      {
+        "denoms": [
+          {
+            "denom": "kei",
+            "exponent": 0
+          },
+          {
+            "denom": "gkei",
+            "exponent": 9
+          },
+          {
+            "denom": "kaia",
+            "exponent": 18
+          }
+        ],
+        "base": "kaia",
+        "symbol": "KAIA"
+      }
+    ],
+    "apps": [
+      {
+        "type": "explorer",
+        "url": "https://kaiascan.io",
+        "tx": "/tx/${tx}",
+        "address": "/address/${address}"
+      }
+    ],
+    "api": [
+      {
+        "url": "https://public-en-kairos.node.kaia.io",
+        "type": "evm"
+      },
+      {
+        "url": "https://responsive-green-emerald.kaia-kairos.quiknode.pro",
+        "type": "evm"
+      },
+      {
+        "url": "https://kaia-kairos.blockpi.network/v1/rpc/public",
+        "type": "evm"
+      }
+    ]
   }
 }
