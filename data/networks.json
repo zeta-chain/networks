@@ -1114,7 +1114,7 @@
     "apps": [
       {
         "type": "explorer",
-        "url": "https://kaiascan.io",
+        "url": "https://kairos.kaiascan.io",
         "tx": "/tx/${tx}",
         "address": "/address/${address}"
       }
